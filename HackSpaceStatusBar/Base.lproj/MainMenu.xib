@@ -734,7 +734,7 @@
                 <subviews>
                     <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3sk-qe-FjX">
                         <rect key="frame" x="129" y="163" width="90" height="90"/>
-                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="Icon2x" id="I0D-ae-P6K"/>
+                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="Icon" id="I0D-ae-P6K"/>
                     </imageView>
                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nDQ-sl-Wjd">
                         <rect key="frame" x="101" y="143" width="146" height="17"/>
@@ -772,11 +772,6 @@
             </view>
             <point key="canvasLocation" x="394" y="-92"/>
         </window>
-        <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" id="9cy-TA-dlr">
-            <rect key="frame" x="0.0" y="0.0" width="48" height="48"/>
-            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-            <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="dBu-4z-uLl"/>
-        </imageView>
         <window title="Preferences" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="F0D-Pd-dTf">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
@@ -790,6 +785,6 @@
         </window>
     </objects>
     <resources>
-        <image name="Icon2x" width="1024" height="1024"/>
+        <image name="Icon" width="1024" height="1024"/>
     </resources>
 </document>

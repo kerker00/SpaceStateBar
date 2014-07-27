@@ -13,6 +13,7 @@
 		2860729919842C7800ED3E11 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2860729819842C7800ED3E11 /* AppDelegate.swift */; };
 		2860729E19842C7800ED3E11 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2860729C19842C7800ED3E11 /* MainMenu.xib */; };
 		286072AA19842C7800ED3E11 /* HackSpaceStatusBarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 286072A919842C7800ED3E11 /* HackSpaceStatusBarTests.swift */; };
+		28E6C05E19856F0A00FCC04A /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 28E6C05D19856F0A00FCC04A /* Icon.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,7 +28,6 @@
 
 /* Begin PBXFileReference section */
 		2808BDBA19845A8700BFAAAC /* TimerEx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerEx.swift; sourceTree = "<group>"; };
-		2808BE0B19854AB700BFAAAC /* Icon2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon2x.png; sourceTree = "<group>"; };
 		280D482D1985502D00F00D58 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		2860729119842C7800ED3E11 /* HackSpaceStatusBar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HackSpaceStatusBar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2860729519842C7800ED3E11 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -37,6 +37,7 @@
 		286072A319842C7800ED3E11 /* HackSpaceStatusBarTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HackSpaceStatusBarTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		286072A819842C7800ED3E11 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		286072A919842C7800ED3E11 /* HackSpaceStatusBarTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HackSpaceStatusBarTests.swift; sourceTree = "<group>"; };
+		28E6C05D19856F0A00FCC04A /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,7 +91,7 @@
 		2860729419842C7800ED3E11 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				2808BE0B19854AB700BFAAAC /* Icon2x.png */,
+				28E6C05D19856F0A00FCC04A /* Icon.png */,
 				2860729519842C7800ED3E11 /* Info.plist */,
 				2860729619842C7800ED3E11 /* main.swift */,
 			);
@@ -194,6 +195,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				28E6C05E19856F0A00FCC04A /* Icon.png in Resources */,
 				280D482E1985502D00F00D58 /* Images.xcassets in Resources */,
 				2860729E19842C7800ED3E11 /* MainMenu.xib in Resources */,
 			);
