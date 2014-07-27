@@ -12,7 +12,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
                             
     @IBOutlet weak var window: NSWindow!
     @IBOutlet weak var menu: NSMenu!
-    @IBOutlet weak var about: NSPanel!
+    @IBOutlet weak var about: NSWindow!
+    @IBOutlet weak var logo: NSImageView!
+    
     var statusItem: NSStatusItem!
     var timer : NSTimer? = nil
     
@@ -25,12 +27,11 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         
         self.getStatus()
         
+        self.getDetails()
+        
     }
     
     @IBAction func showDetails(sender: AnyObject) {
-       
-        
-
         NSApp.activateIgnoringOtherApps(true)
         window.makeKeyAndOrderFront(nil)
     }
@@ -56,6 +57,11 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
 
     
+    @IBAction func showAboutView(sender: AnyObject) {
+        NSApp.activateIgnoringOtherApps(true)
+        about.makeKeyAndOrderFront(nil)
+    }
+    
     func getJSON(urlToRequest: String) -> NSData?{
         return NSData(contentsOfURL: NSURL(string: urlToRequest))
     }
@@ -65,6 +71,10 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         var boardsDictionary: NSDictionary = NSJSONSerialization.JSONObjectWithData(inputData, options: NSJSONReadingOptions.MutableContainers, error: &error) as NSDictionary
         
         return boardsDictionary
+    }
+    
+    func getDetails(){
+        
     }
     
     func getStatus() {

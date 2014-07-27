@@ -9,13 +9,10 @@
 /* Begin PBXBuildFile section */
 		2808BDBB19845A8700BFAAAC /* TimerEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2808BDBA19845A8700BFAAAC /* TimerEx.swift */; };
 		280D482E1985502D00F00D58 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 280D482D1985502D00F00D58 /* Images.xcassets */; };
-		280D48301985553B00F00D58 /* mainframe.png in Resources */ = {isa = PBXBuildFile; fileRef = 280D482F1985553B00F00D58 /* mainframe.png */; };
-		280D48321985563300F00D58 /* mainframeKopie.png in Resources */ = {isa = PBXBuildFile; fileRef = 280D48311985563300F00D58 /* mainframeKopie.png */; };
 		2860729719842C7800ED3E11 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2860729619842C7800ED3E11 /* main.swift */; };
 		2860729919842C7800ED3E11 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2860729819842C7800ED3E11 /* AppDelegate.swift */; };
 		2860729E19842C7800ED3E11 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2860729C19842C7800ED3E11 /* MainMenu.xib */; };
 		286072AA19842C7800ED3E11 /* HackSpaceStatusBarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 286072A919842C7800ED3E11 /* HackSpaceStatusBarTests.swift */; };
-		286072B419842C8500ED3E11 /* asdf.png in Resources */ = {isa = PBXBuildFile; fileRef = 286072B319842C8500ED3E11 /* asdf.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,11 +27,8 @@
 
 /* Begin PBXFileReference section */
 		2808BDBA19845A8700BFAAAC /* TimerEx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerEx.swift; sourceTree = "<group>"; };
-		2808BE0A198549FC00BFAAAC /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
 		2808BE0B19854AB700BFAAAC /* Icon2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon2x.png; sourceTree = "<group>"; };
 		280D482D1985502D00F00D58 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		280D482F1985553B00F00D58 /* mainframe.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mainframe.png; sourceTree = "<group>"; };
-		280D48311985563300F00D58 /* mainframeKopie.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mainframeKopie.png; sourceTree = "<group>"; };
 		2860729119842C7800ED3E11 /* HackSpaceStatusBar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HackSpaceStatusBar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2860729519842C7800ED3E11 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2860729619842C7800ED3E11 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
@@ -43,7 +37,6 @@
 		286072A319842C7800ED3E11 /* HackSpaceStatusBarTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HackSpaceStatusBarTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		286072A819842C7800ED3E11 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		286072A919842C7800ED3E11 /* HackSpaceStatusBarTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HackSpaceStatusBarTests.swift; sourceTree = "<group>"; };
-		286072B319842C8500ED3E11 /* asdf.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = asdf.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,11 +90,7 @@
 		2860729419842C7800ED3E11 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				280D48311985563300F00D58 /* mainframeKopie.png */,
-				280D482F1985553B00F00D58 /* mainframe.png */,
 				2808BE0B19854AB700BFAAAC /* Icon2x.png */,
-				2808BE0A198549FC00BFAAAC /* Icon.png */,
-				286072B319842C8500ED3E11 /* asdf.png */,
 				2860729519842C7800ED3E11 /* Info.plist */,
 				2860729619842C7800ED3E11 /* main.swift */,
 			);
@@ -205,11 +194,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				280D48301985553B00F00D58 /* mainframe.png in Resources */,
 				280D482E1985502D00F00D58 /* Images.xcassets in Resources */,
 				2860729E19842C7800ED3E11 /* MainMenu.xib in Resources */,
-				280D48321985563300F00D58 /* mainframeKopie.png in Resources */,
-				286072B419842C8500ED3E11 /* asdf.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
