@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>E03212F9-C910-423F-95D9-848557AD3E12</string>
+	<key>IDESourceControlProjectName</key>
+	<string>MainFrameStatusBar</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>241005F0-8FD9-4EA8-A0CF-DC3027D39D45</key>
+		<string>https://github.com/kerker00/MainFrameStatusBar.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>MainFrameStatusBar.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>241005F0-8FD9-4EA8-A0CF-DC3027D39D45</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/kerker00/MainFrameStatusBar.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>241005F0-8FD9-4EA8-A0CF-DC3027D39D45</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>241005F0-8FD9-4EA8-A0CF-DC3027D39D45</string>
+			<key>IDESourceControlWCCName</key>
+			<string>MainFrameStatusBar</string>
+		</dict>
+	</array>
+</dict>
+</plist>

@@ -14,6 +14,8 @@
 		2860729E19842C7800ED3E11 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2860729C19842C7800ED3E11 /* MainMenu.xib */; };
 		286072AA19842C7800ED3E11 /* HackSpaceStatusBarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 286072A919842C7800ED3E11 /* HackSpaceStatusBarTests.swift */; };
 		28E6C05E19856F0A00FCC04A /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 28E6C05D19856F0A00FCC04A /* Icon.png */; };
+		28E6C062198571B300FCC04A /* Preferences.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28E6C061198571B300FCC04A /* Preferences.xib */; };
+		28E6C0641985729800FCC04A /* PreferencePane.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28E6C0631985729800FCC04A /* PreferencePane.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +40,8 @@
 		286072A819842C7800ED3E11 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		286072A919842C7800ED3E11 /* HackSpaceStatusBarTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HackSpaceStatusBarTests.swift; sourceTree = "<group>"; };
 		28E6C05D19856F0A00FCC04A /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		28E6C061198571B300FCC04A /* Preferences.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = Preferences.xib; path = ../Preferences.xib; sourceTree = "<group>"; };
+		28E6C0631985729800FCC04A /* PreferencePane.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreferencePane.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,8 +86,10 @@
 				280D482D1985502D00F00D58 /* Images.xcassets */,
 				2860729819842C7800ED3E11 /* AppDelegate.swift */,
 				2860729C19842C7800ED3E11 /* MainMenu.xib */,
+				28E6C061198571B300FCC04A /* Preferences.xib */,
 				2860729419842C7800ED3E11 /* Supporting Files */,
 				2808BDBA19845A8700BFAAAC /* TimerEx.swift */,
+				28E6C0631985729800FCC04A /* PreferencePane.swift */,
 			);
 			path = HackSpaceStatusBar;
 			sourceTree = "<group>";
@@ -197,6 +203,7 @@
 			files = (
 				28E6C05E19856F0A00FCC04A /* Icon.png in Resources */,
 				280D482E1985502D00F00D58 /* Images.xcassets in Resources */,
+				28E6C062198571B300FCC04A /* Preferences.xib in Resources */,
 				2860729E19842C7800ED3E11 /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -217,6 +224,7 @@
 			files = (
 				2808BDBB19845A8700BFAAAC /* TimerEx.swift in Sources */,
 				2860729919842C7800ED3E11 /* AppDelegate.swift in Sources */,
+				28E6C0641985729800FCC04A /* PreferencePane.swift in Sources */,
 				2860729719842C7800ED3E11 /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
