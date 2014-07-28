@@ -1,4 +1,5 @@
 # MainFrameStatusBar
+Disclaimer: this application is still under construction! The main function, showing the space status works well, but many features are not working. This is an alpha version! 
 ## About
 This is a small Mac OSX Menu Application that will show the status of the hackspace mainframe located in oldenburg. 
     
