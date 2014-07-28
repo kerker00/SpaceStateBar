@@ -1,6 +1,7 @@
 # MainFrameStatusBar
 ## About
 This is a small Mac OSX Menu Application that will show the status of the hackspace mainframe located in oldenburg. 
+    
     - O is for Open
     - C is for Closed
     - X is for Unknown state (no connection)
