@@ -12,45 +12,24 @@
 		2860729719842C7800ED3E11 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2860729619842C7800ED3E11 /* main.swift */; };
 		2860729919842C7800ED3E11 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2860729819842C7800ED3E11 /* AppDelegate.swift */; };
 		2860729E19842C7800ED3E11 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2860729C19842C7800ED3E11 /* MainMenu.xib */; };
-		286072AA19842C7800ED3E11 /* HackSpaceStatusBarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 286072A919842C7800ED3E11 /* HackSpaceStatusBarTests.swift */; };
 		28E6C05E19856F0A00FCC04A /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 28E6C05D19856F0A00FCC04A /* Icon.png */; };
 		28E6C0641985729800FCC04A /* PreferencePane.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28E6C0631985729800FCC04A /* PreferencePane.swift */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		286072A419842C7800ED3E11 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 2860728919842C7800ED3E11 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 2860729019842C7800ED3E11;
-			remoteInfo = HackSpaceStatusBar;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
 		2808BDBA19845A8700BFAAAC /* TimerEx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerEx.swift; sourceTree = "<group>"; };
 		280D482D1985502D00F00D58 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		2860729119842C7800ED3E11 /* HackSpaceStatusBar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HackSpaceStatusBar.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2860729119842C7800ED3E11 /* MainFrameStatusBar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MainFrameStatusBar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2860729519842C7800ED3E11 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2860729619842C7800ED3E11 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		2860729819842C7800ED3E11 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2860729D19842C7800ED3E11 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
-		286072A319842C7800ED3E11 /* HackSpaceStatusBarTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HackSpaceStatusBarTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		286072A819842C7800ED3E11 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		286072A919842C7800ED3E11 /* HackSpaceStatusBarTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HackSpaceStatusBarTests.swift; sourceTree = "<group>"; };
 		28E6C05D19856F0A00FCC04A /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
 		28E6C0631985729800FCC04A /* PreferencePane.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreferencePane.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		2860728E19842C7800ED3E11 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		286072A019842C7800ED3E11 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -64,7 +43,6 @@
 			isa = PBXGroup;
 			children = (
 				2860729319842C7800ED3E11 /* HackSpaceStatusBar */,
-				286072A619842C7800ED3E11 /* HackSpaceStatusBarTests */,
 				2860729219842C7800ED3E11 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -72,8 +50,7 @@
 		2860729219842C7800ED3E11 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				2860729119842C7800ED3E11 /* HackSpaceStatusBar.app */,
-				286072A319842C7800ED3E11 /* HackSpaceStatusBarTests.xctest */,
+				2860729119842C7800ED3E11 /* MainFrameStatusBar.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -101,23 +78,6 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		286072A619842C7800ED3E11 /* HackSpaceStatusBarTests */ = {
-			isa = PBXGroup;
-			children = (
-				286072A919842C7800ED3E11 /* HackSpaceStatusBarTests.swift */,
-				286072A719842C7800ED3E11 /* Supporting Files */,
-			);
-			path = HackSpaceStatusBarTests;
-			sourceTree = "<group>";
-		};
-		286072A719842C7800ED3E11 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				286072A819842C7800ED3E11 /* Info.plist */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,26 +95,8 @@
 			);
 			name = HackSpaceStatusBar;
 			productName = HackSpaceStatusBar;
-			productReference = 2860729119842C7800ED3E11 /* HackSpaceStatusBar.app */;
+			productReference = 2860729119842C7800ED3E11 /* MainFrameStatusBar.app */;
 			productType = "com.apple.product-type.application";
-		};
-		286072A219842C7800ED3E11 /* HackSpaceStatusBarTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 286072B019842C7800ED3E11 /* Build configuration list for PBXNativeTarget "HackSpaceStatusBarTests" */;
-			buildPhases = (
-				2860729F19842C7800ED3E11 /* Sources */,
-				286072A019842C7800ED3E11 /* Frameworks */,
-				286072A119842C7800ED3E11 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				286072A519842C7800ED3E11 /* PBXTargetDependency */,
-			);
-			name = HackSpaceStatusBarTests;
-			productName = HackSpaceStatusBarTests;
-			productReference = 286072A319842C7800ED3E11 /* HackSpaceStatusBarTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -167,10 +109,6 @@
 				TargetAttributes = {
 					2860729019842C7800ED3E11 = {
 						CreatedOnToolsVersion = 6.0;
-					};
-					286072A219842C7800ED3E11 = {
-						CreatedOnToolsVersion = 6.0;
-						TestTargetID = 2860729019842C7800ED3E11;
 					};
 				};
 			};
@@ -188,7 +126,6 @@
 			projectRoot = "";
 			targets = (
 				2860729019842C7800ED3E11 /* HackSpaceStatusBar */,
-				286072A219842C7800ED3E11 /* HackSpaceStatusBarTests */,
 			);
 		};
 /* End PBXProject section */
@@ -201,13 +138,6 @@
 				28E6C05E19856F0A00FCC04A /* Icon.png in Resources */,
 				280D482E1985502D00F00D58 /* Images.xcassets in Resources */,
 				2860729E19842C7800ED3E11 /* MainMenu.xib in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		286072A119842C7800ED3E11 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -225,23 +155,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		2860729F19842C7800ED3E11 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				286072AA19842C7800ED3E11 /* HackSpaceStatusBarTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		286072A519842C7800ED3E11 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 2860729019842C7800ED3E11 /* HackSpaceStatusBar */;
-			targetProxy = 286072A419842C7800ED3E11 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		2860729C19842C7800ED3E11 /* MainMenu.xib */ = {
@@ -292,8 +206,9 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = macosx;
+				SDKROOT = macosx10.9;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				VALID_ARCHS = "x86_64 i386";
 			};
 			name = Debug;
 		};
@@ -329,7 +244,8 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = macosx;
+				SDKROOT = macosx10.9;
+				VALID_ARCHS = "x86_64 i386";
 			};
 			name = Release;
 		};
@@ -341,7 +257,7 @@
 				INFOPLIST_FILE = HackSpaceStatusBar/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = MainFrameStatusBar;
 				SDKROOT = macosx10.9;
 			};
 			name = Debug;
@@ -354,44 +270,8 @@
 				INFOPLIST_FILE = HackSpaceStatusBar/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = MainFrameStatusBar;
 				SDKROOT = macosx10.9;
-			};
-			name = Release;
-		};
-		286072B119842C7800ED3E11 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/HackSpaceStatusBar.app/Contents/MacOS/HackSpaceStatusBar";
-				COMBINE_HIDPI_IMAGES = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = HackSpaceStatusBarTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-			};
-			name = Debug;
-		};
-		286072B219842C7800ED3E11 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/HackSpaceStatusBar.app/Contents/MacOS/HackSpaceStatusBar";
-				COMBINE_HIDPI_IMAGES = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = HackSpaceStatusBarTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
 			};
 			name = Release;
 		};
@@ -412,15 +292,6 @@
 			buildConfigurations = (
 				286072AE19842C7800ED3E11 /* Debug */,
 				286072AF19842C7800ED3E11 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		286072B019842C7800ED3E11 /* Build configuration list for PBXNativeTarget "HackSpaceStatusBarTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				286072B119842C7800ED3E11 /* Debug */,
-				286072B219842C7800ED3E11 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

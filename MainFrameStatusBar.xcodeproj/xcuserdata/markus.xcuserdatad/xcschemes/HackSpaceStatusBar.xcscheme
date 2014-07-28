@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "2860729019842C7800ED3E11"
-               BuildableName = "HackSpaceStatusBar.app"
+               BuildableName = "MainFrameStatusBar.app"
                BlueprintName = "HackSpaceStatusBar"
                ReferencedContainer = "container:MainFrameStatusBar.xcodeproj">
             </BuildableReference>
@@ -43,7 +43,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "2860729019842C7800ED3E11"
-            BuildableName = "HackSpaceStatusBar.app"
+            BuildableName = "MainFrameStatusBar.app"
             BlueprintName = "HackSpaceStatusBar"
             ReferencedContainer = "container:MainFrameStatusBar.xcodeproj">
          </BuildableReference>
@@ -62,7 +62,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "2860729019842C7800ED3E11"
-            BuildableName = "HackSpaceStatusBar.app"
+            BuildableName = "MainFrameStatusBar.app"
             BlueprintName = "HackSpaceStatusBar"
             ReferencedContainer = "container:MainFrameStatusBar.xcodeproj">
          </BuildableReference>
@@ -80,7 +80,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "2860729019842C7800ED3E11"
-            BuildableName = "HackSpaceStatusBar.app"
+            BuildableName = "MainFrameStatusBar.app"
             BlueprintName = "HackSpaceStatusBar"
             ReferencedContainer = "container:MainFrameStatusBar.xcodeproj">
          </BuildableReference>

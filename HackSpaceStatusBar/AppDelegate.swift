@@ -103,5 +103,18 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             println("Unknown")
         }
     }
+    @IBAction func restartApp(sender: AnyObject) {
+        var task = NSTask()
+        
+        var args: NSMutableArray
+        args = NSMutableArray()
+        args.addObject("-c")
+        args.addObject("sleep 0.2; open \"\(NSBundle.mainBundle().bundlePath())\"")
+        
+        task.setLaunchPath("/bin/sh")
+        task.setArguments(args)
+        task.launch()
+        NSApplication.sharedApplication().terminate(nil)
+    }
 }
 

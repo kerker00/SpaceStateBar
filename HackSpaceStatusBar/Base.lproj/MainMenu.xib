@@ -11,7 +11,7 @@
         </customObject>
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
-        <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="HackSpaceStatusBar" customModuleProvider="target">
+        <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="MainFrameStatusBar" customModuleProvider="target">
             <connections>
                 <outlet property="Logo" destination="LoZ-5d-8qI" id="jEv-iE-sSB"/>
                 <outlet property="about" destination="Hzx-lU-njO" id="817-FM-csE"/>
@@ -786,14 +786,14 @@ https://github.com/kerker00/mainFrameStatusBar</string>
         <window title="Preferences" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="dOZ-gH-c37">
             <windowStyleMask key="styleMask" titled="YES" closable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
-            <rect key="contentRect" x="196" y="240" width="384" height="114"/>
+            <rect key="contentRect" x="196" y="240" width="462" height="161"/>
             <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1028"/>
             <view key="contentView" id="WOU-mM-Lh6">
-                <rect key="frame" x="0.0" y="0.0" width="384" height="114"/>
+                <rect key="frame" x="0.0" y="0.0" width="462" height="161"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wTi-xF-eWo">
-                        <rect key="frame" x="53" y="77" width="221" height="17"/>
+                        <rect key="frame" x="36" y="124" width="221" height="17"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="Start MainFrameStatusBar at login:" id="Xt0-Xk-ZOD">
                             <font key="font" metaFont="system"/>
                             <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
@@ -801,7 +801,7 @@ https://github.com/kerker00/mainFrameStatusBar</string>
                         </textFieldCell>
                     </textField>
                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oSH-ir-3aV">
-                        <rect key="frame" x="65" y="25" width="209" height="17"/>
+                        <rect key="frame" x="48" y="72" width="209" height="17"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="Set request timer interval:  " id="LQr-YN-ADx">
                             <font key="font" metaFont="system"/>
                             <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
@@ -809,7 +809,7 @@ https://github.com/kerker00/mainFrameStatusBar</string>
                         </textFieldCell>
                     </textField>
                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7YG-Zd-aw8">
-                        <rect key="frame" x="166" y="52" width="108" height="17"/>
+                        <rect key="frame" x="149" y="99" width="108" height="17"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="Show Dock icon:" id="bKm-AG-HCL">
                             <font key="font" metaFont="system"/>
                             <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
@@ -817,7 +817,7 @@ https://github.com/kerker00/mainFrameStatusBar</string>
                         </textFieldCell>
                     </textField>
                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="I4n-95-vEP">
-                        <rect key="frame" x="331" y="25" width="24" height="17"/>
+                        <rect key="frame" x="314" y="72" width="24" height="17"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="s" id="lFF-LP-yQ7">
                             <font key="font" metaFont="system"/>
                             <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
@@ -825,7 +825,7 @@ https://github.com/kerker00/mainFrameStatusBar</string>
                         </textFieldCell>
                     </textField>
                     <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xPu-mI-doE">
-                        <rect key="frame" x="283" y="22" width="53" height="22"/>
+                        <rect key="frame" x="266" y="69" width="53" height="22"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" alignment="right" placeholderString="120" drawsBackground="YES" id="FPu-p7-juD">
                             <numberFormatter key="formatter" formatterBehavior="default10_4" numberStyle="decimal" minimumIntegerDigits="1" maximumIntegerDigits="309" maximumFractionDigits="3" id="y8L-jD-YQS"/>
                             <font key="font" metaFont="system"/>
@@ -834,22 +834,32 @@ https://github.com/kerker00/mainFrameStatusBar</string>
                         </textFieldCell>
                     </textField>
                     <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="egR-ob-a7C">
-                        <rect key="frame" x="281" y="51" width="61" height="18"/>
-                        <buttonCell key="cell" type="check" title="Check" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="c7K-k7-odG">
+                        <rect key="frame" x="264" y="98" width="163" height="18"/>
+                        <buttonCell key="cell" type="check" title=" (App restart required)" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="c7K-k7-odG">
                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                             <font key="font" metaFont="system"/>
                         </buttonCell>
                     </button>
                     <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xrh-Nx-DkO">
-                        <rect key="frame" x="281" y="75" width="61" height="18"/>
-                        <buttonCell key="cell" type="check" title="Check" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="vqd-0N-74n">
+                        <rect key="frame" x="264" y="122" width="22" height="18"/>
+                        <buttonCell key="cell" type="check" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="vqd-0N-74n">
                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                             <font key="font" metaFont="system"/>
                         </buttonCell>
                     </button>
+                    <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wBp-Tf-oWS">
+                        <rect key="frame" x="124" y="13" width="215" height="32"/>
+                        <buttonCell key="cell" type="push" title="Restart MainFrameStatusBar" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="ix4-mQ-UFT">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="restartApp:" target="Voe-Tx-rLC" id="zEW-lm-vMO"/>
+                        </connections>
+                    </button>
                 </subviews>
             </view>
-            <point key="canvasLocation" x="-32" y="-331"/>
+            <point key="canvasLocation" x="7" y="-307.5"/>
         </window>
     </objects>
     <resources>
