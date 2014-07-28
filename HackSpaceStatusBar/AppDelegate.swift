@@ -12,6 +12,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
                             
     @IBOutlet weak var window: NSWindow!
     @IBOutlet weak var menu: NSMenu!
+    @IBOutlet weak var prefs: NSWindow!
     @IBOutlet weak var about: NSWindow!
     @IBOutlet weak var logo: NSImageView!
     
@@ -62,6 +63,11 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         about.makeKeyAndOrderFront(nil)
     }
     
+    @IBAction func showPrefView(sender: AnyObject) {
+        NSApp.activateIgnoringOtherApps(true)
+        prefs.makeKeyAndOrderFront(nil)
+    }
+    
     func getJSON(urlToRequest: String) -> NSData?{
         return NSData(contentsOfURL: NSURL(string: urlToRequest))
     }
@@ -75,6 +81,11 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     
     func getDetails(){
         
+    }
+    
+    
+    @IBAction func refreshStatus(sender: AnyObject) {
+        self.getStatus()
     }
     
     func getStatus() {
