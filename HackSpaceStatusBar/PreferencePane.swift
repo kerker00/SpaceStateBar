@@ -8,6 +8,6 @@
 
 import Cocoa
 
-class preferencePane {
+class preferencePane: NSWindow {
 
 }

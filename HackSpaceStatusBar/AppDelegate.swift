@@ -10,11 +10,13 @@ import Cocoa
 
 class AppDelegate: NSObject, NSApplicationDelegate {
                             
-    @IBOutlet weak var window: NSWindow!
+  
     @IBOutlet weak var menu: NSMenu!
     @IBOutlet weak var prefs: NSWindow!
     @IBOutlet weak var about: NSWindow!
-    @IBOutlet weak var logo: NSImageView!
+    
+    @IBOutlet weak var details: StatusDetails!
+    
     
     var statusItem: NSStatusItem!
     var timer : NSTimer? = nil
@@ -32,14 +34,11 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         
     }
     
-    @IBAction func showDetails(sender: AnyObject) {
-        NSApp.activateIgnoringOtherApps(true)
-        window.makeKeyAndOrderFront(nil)
-    }
     @IBAction func quit(sender: AnyObject) {
         NSApplication.sharedApplication().terminate(nil)
     }
     func applicationDidFinishLaunching(aNotification: NSNotification?) {
+        
         if timer {
             timer!.invalidate()
         }
@@ -49,14 +48,14 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         }
     }
 
-    @IBAction func aboutScreen(sender: AnyObject) {
-        NSApp.activateIgnoringOtherApps(true)
-        window.makeKeyAndOrderFront(nil)
-    }
     func applicationWillTerminate(aNotification: NSNotification?) {
         // Insert code here to tear down your application
     }
 
+    @IBAction func showDetailsView(sender: AnyObject) {
+        NSApp.activateIgnoringOtherApps(true)
+        details.makeKeyAndOrderFront(nil)
+    }
     
     @IBAction func showAboutView(sender: AnyObject) {
         NSApp.activateIgnoringOtherApps(true)

@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		2808BDBB19845A8700BFAAAC /* TimerEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2808BDBA19845A8700BFAAAC /* TimerEx.swift */; };
 		280D482E1985502D00F00D58 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 280D482D1985502D00F00D58 /* Images.xcassets */; };
+		283D7561198FF24900729852 /* StatusDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 283D7560198FF24900729852 /* StatusDetails.swift */; };
 		2860729719842C7800ED3E11 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2860729619842C7800ED3E11 /* main.swift */; };
 		2860729919842C7800ED3E11 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2860729819842C7800ED3E11 /* AppDelegate.swift */; };
 		2860729E19842C7800ED3E11 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2860729C19842C7800ED3E11 /* MainMenu.xib */; };
@@ -19,6 +20,7 @@
 /* Begin PBXFileReference section */
 		2808BDBA19845A8700BFAAAC /* TimerEx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerEx.swift; sourceTree = "<group>"; };
 		280D482D1985502D00F00D58 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		283D7560198FF24900729852 /* StatusDetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusDetails.swift; sourceTree = "<group>"; };
 		2860729119842C7800ED3E11 /* MainFrameStatusBar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MainFrameStatusBar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2860729519842C7800ED3E11 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2860729619842C7800ED3E11 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
@@ -64,6 +66,7 @@
 				2860729419842C7800ED3E11 /* Supporting Files */,
 				2808BDBA19845A8700BFAAAC /* TimerEx.swift */,
 				28E6C0631985729800FCC04A /* PreferencePane.swift */,
+				283D7560198FF24900729852 /* StatusDetails.swift */,
 			);
 			path = HackSpaceStatusBar;
 			sourceTree = "<group>";
@@ -151,6 +154,7 @@
 				2808BDBB19845A8700BFAAAC /* TimerEx.swift in Sources */,
 				2860729919842C7800ED3E11 /* AppDelegate.swift in Sources */,
 				28E6C0641985729800FCC04A /* PreferencePane.swift in Sources */,
+				283D7561198FF24900729852 /* StatusDetails.swift in Sources */,
 				2860729719842C7800ED3E11 /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

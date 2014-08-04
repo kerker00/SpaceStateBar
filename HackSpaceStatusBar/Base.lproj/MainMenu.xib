@@ -13,8 +13,8 @@
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
         <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="MainFrameStatusBar" customModuleProvider="target">
             <connections>
-                <outlet property="Logo" destination="LoZ-5d-8qI" id="jEv-iE-sSB"/>
                 <outlet property="about" destination="Hzx-lU-njO" id="817-FM-csE"/>
+                <outlet property="details" destination="QvC-M9-y7g" id="5mJ-7i-WuU"/>
                 <outlet property="menu" destination="brM-qB-2UZ" id="Chp-Lx-Y93"/>
                 <outlet property="prefs" destination="dOZ-gH-c37" id="alc-8D-h9i"/>
                 <outlet property="refreshStatus" destination="qYi-ja-TG0" id="0Gg-Uo-wQU"/>
@@ -671,30 +671,86 @@
                 </menuItem>
             </items>
         </menu>
-        <window title="Main Frame Status" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="QvC-M9-y7g">
-            <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
+        <window title="Main Frame Status" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="QvC-M9-y7g" customClass="StatusDetails" customModule="MainFrameStatusBar">
+            <windowStyleMask key="styleMask" titled="YES" closable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
-            <rect key="contentRect" x="335" y="390" width="480" height="360"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1028"/>
+            <rect key="contentRect" x="335" y="390" width="418" height="299"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="2560" height="1418"/>
             <view key="contentView" id="EiT-Mj-1SZ">
-                <rect key="frame" x="0.0" y="0.0" width="480" height="360"/>
+                <rect key="frame" x="0.0" y="0.0" width="418" height="299"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jWz-n7-uw1">
-                        <rect key="frame" x="43" y="266" width="38" height="17"/>
-                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Label" id="jPh-Gd-b6k">
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GM3-kf-ezM">
+                        <rect key="frame" x="34" y="242" width="57" height="17"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="Website:" id="MLW-DU-ny4">
                             <font key="font" metaFont="system"/>
                             <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
-                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LoZ-5d-8qI">
-                        <rect key="frame" x="108" y="286" width="265" height="54"/>
-                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="e5P-ex-HwH"/>
-                    </imageView>
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rp8-B2-EmC">
+                        <rect key="frame" x="30" y="215" width="59" height="17"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="Address:" id="jWp-sx-ktG">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Nay-nE-KuL">
+                        <rect key="frame" x="34" y="171" width="57" height="17"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="Contact:" id="6LA-zE-aJg">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Tm4-ae-wVm">
+                        <rect key="frame" x="96" y="132" width="296" height="56"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" sendsActionOnEndEditing="YES" state="on" drawsBackground="YES" id="REc-H5-507">
+                            <font key="font" metaFont="system"/>
+                            <string key="title">irc: irc://freenode/#hsol
+twitter: @HackspaceOL
+email: vorstand@kreativitaet-trifft-technik.de</string>
+                            <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" white="1" alpha="0.0" colorSpace="deviceWhite"/>
+                        </textFieldCell>
+                    </textField>
+                    <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="f5W-Cv-QC8">
+                        <rect key="frame" x="95" y="198" width="313" height="34"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" sendsActionOnEndEditing="YES" state="on" drawsBackground="YES" id="mR5-uv-I9W">
+                            <font key="font" metaFont="system"/>
+                            <string key="title">Raiffeisenstrasse 27 
+26122 Oldenburg, Germany</string>
+                            <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" white="1" alpha="0.0" colorSpace="deviceWhite"/>
+                        </textFieldCell>
+                    </textField>
+                    <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oig-77-qBN">
+                        <rect key="frame" x="161" y="26" width="87" height="32"/>
+                        <buttonCell key="cell" type="push" title="Refresh" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="kDu-FI-Vmf">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="refreshDetails:" target="QvC-M9-y7g" id="3fX-Oh-xX9"/>
+                        </connections>
+                    </button>
+                    <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="c3A-39-rjL">
+                        <rect key="frame" x="97" y="237" width="238" height="22"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" sendsActionOnEndEditing="YES" state="on" title="http://mainframe.io/" drawsBackground="YES" id="ZRg-f2-dGs">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" white="1" alpha="0.0" colorSpace="deviceWhite"/>
+                        </textFieldCell>
+                    </textField>
                 </subviews>
             </view>
-            <point key="canvasLocation" x="-110" y="-389"/>
+            <connections>
+                <outlet property="refreshAction" destination="oig-77-qBN" id="4l7-5a-cv0"/>
+                <outlet property="view" destination="EiT-Mj-1SZ" id="4xL-jw-Nfn"/>
+                <outlet property="website" destination="c3A-39-rjL" id="yPi-WH-byH"/>
+            </connections>
+            <point key="canvasLocation" x="-65" y="154.5"/>
         </window>
         <menu id="brM-qB-2UZ">
             <items>
@@ -707,7 +763,7 @@
                 <menuItem title="MainFrame Details" id="TJg-AK-JUu">
                     <modifierMask key="keyEquivalentModifierMask"/>
                     <connections>
-                        <action selector="showDetails:" target="Voe-Tx-rLC" id="ny7-lZ-hjX"/>
+                        <action selector="showDetailsView:" target="Voe-Tx-rLC" id="pNY-Hg-uHb"/>
                     </connections>
                 </menuItem>
                 <menuItem title="Preferences" id="OYz-Rd-zyQ">
@@ -730,13 +786,13 @@
                     </connections>
                 </menuItem>
             </items>
-            <point key="canvasLocation" x="59.5" y="25.5"/>
+            <point key="canvasLocation" x="312.5" y="154.5"/>
         </menu>
         <window title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="Hzx-lU-njO">
             <windowStyleMask key="styleMask" titled="YES" closable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="283" y="305" width="348" height="260"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1028"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="2560" height="1418"/>
             <view key="contentView" id="611-zl-BLt">
                 <rect key="frame" x="0.0" y="0.0" width="348" height="260"/>
                 <autoresizingMask key="autoresizingMask"/>
@@ -786,14 +842,14 @@ https://github.com/kerker00/mainFrameStatusBar</string>
         <window title="Preferences" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="dOZ-gH-c37">
             <windowStyleMask key="styleMask" titled="YES" closable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
-            <rect key="contentRect" x="196" y="240" width="462" height="161"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1028"/>
+            <rect key="contentRect" x="196" y="240" width="462" height="167"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="2560" height="1418"/>
             <view key="contentView" id="WOU-mM-Lh6">
-                <rect key="frame" x="0.0" y="0.0" width="462" height="161"/>
+                <rect key="frame" x="0.0" y="0.0" width="462" height="167"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wTi-xF-eWo">
-                        <rect key="frame" x="36" y="124" width="221" height="17"/>
+                        <rect key="frame" x="36" y="122" width="221" height="17"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="Start MainFrameStatusBar at login:" id="Xt0-Xk-ZOD">
                             <font key="font" metaFont="system"/>
                             <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
@@ -801,7 +857,7 @@ https://github.com/kerker00/mainFrameStatusBar</string>
                         </textFieldCell>
                     </textField>
                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oSH-ir-3aV">
-                        <rect key="frame" x="48" y="72" width="209" height="17"/>
+                        <rect key="frame" x="48" y="70" width="209" height="17"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="Set request timer interval:  " id="LQr-YN-ADx">
                             <font key="font" metaFont="system"/>
                             <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
@@ -809,7 +865,7 @@ https://github.com/kerker00/mainFrameStatusBar</string>
                         </textFieldCell>
                     </textField>
                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7YG-Zd-aw8">
-                        <rect key="frame" x="149" y="99" width="108" height="17"/>
+                        <rect key="frame" x="149" y="97" width="108" height="17"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="Show Dock icon:" id="bKm-AG-HCL">
                             <font key="font" metaFont="system"/>
                             <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
@@ -817,7 +873,7 @@ https://github.com/kerker00/mainFrameStatusBar</string>
                         </textFieldCell>
                     </textField>
                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="I4n-95-vEP">
-                        <rect key="frame" x="314" y="72" width="24" height="17"/>
+                        <rect key="frame" x="314" y="70" width="24" height="17"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="s" id="lFF-LP-yQ7">
                             <font key="font" metaFont="system"/>
                             <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
@@ -825,7 +881,7 @@ https://github.com/kerker00/mainFrameStatusBar</string>
                         </textFieldCell>
                     </textField>
                     <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xPu-mI-doE">
-                        <rect key="frame" x="266" y="69" width="53" height="22"/>
+                        <rect key="frame" x="266" y="67" width="53" height="22"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" alignment="right" placeholderString="120" drawsBackground="YES" id="FPu-p7-juD">
                             <numberFormatter key="formatter" formatterBehavior="default10_4" numberStyle="decimal" minimumIntegerDigits="1" maximumIntegerDigits="309" maximumFractionDigits="3" id="y8L-jD-YQS"/>
                             <font key="font" metaFont="system"/>
@@ -834,14 +890,14 @@ https://github.com/kerker00/mainFrameStatusBar</string>
                         </textFieldCell>
                     </textField>
                     <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="egR-ob-a7C">
-                        <rect key="frame" x="264" y="98" width="163" height="18"/>
+                        <rect key="frame" x="264" y="96" width="163" height="18"/>
                         <buttonCell key="cell" type="check" title=" (App restart required)" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="c7K-k7-odG">
                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                             <font key="font" metaFont="system"/>
                         </buttonCell>
                     </button>
                     <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xrh-Nx-DkO">
-                        <rect key="frame" x="264" y="122" width="22" height="18"/>
+                        <rect key="frame" x="264" y="120" width="22" height="18"/>
                         <buttonCell key="cell" type="check" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="vqd-0N-74n">
                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                             <font key="font" metaFont="system"/>
@@ -859,7 +915,7 @@ https://github.com/kerker00/mainFrameStatusBar</string>
                     </button>
                 </subviews>
             </view>
-            <point key="canvasLocation" x="7" y="-307.5"/>
+            <point key="canvasLocation" x="-87" y="-173.5"/>
         </window>
     </objects>
     <resources>
