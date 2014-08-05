@@ -7,7 +7,6 @@
 //
 
 import Cocoa
-import AppKit
 
 class AppDelegate: NSObject, NSApplicationDelegate {
                             
@@ -16,6 +15,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     @IBOutlet weak var prefs: NSWindow!
     @IBOutlet weak var about: NSWindow!
     
+    
+    @IBOutlet weak var details: StatusDetails!
     
     var statusItem: NSStatusItem!
     var timer : NSTimer = NSTimer()
@@ -53,10 +54,11 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         // Insert code here to tear down your application
     }
 
-//    @IBAction func showDetailsView(sender: AnyObject) {
-//        NSApp.activateIgnoringOtherApps(true)
-//        details.makeKeyAndOrderFront(nil)
-//    }
+    @IBAction func showDetailsView(sender: AnyObject) {
+        NSApp.activateIgnoringOtherApps(true)
+        details.center()
+        details.makeKeyAndOrderFront(nil)
+    }
     
     @IBAction func showAboutView(sender: AnyObject) {
         NSApp.activateIgnoringOtherApps(true)
@@ -85,6 +87,11 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         
     }
     
+    
+    @IBAction func refresh(sender: AnyObject) {
+        self.getStatus()
+    }
+    
     func getStatus() {
         if let myAnswer = self.getJSON("http://status.kreativitaet-trifft-technik.de/api/openState") {
             if(self.parseJSON(myAnswer).valueForKey("state") as NSString == "off") {
@@ -100,6 +107,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             println("Unknown")
         }
     }
+    
     @IBAction func restartApp(sender: AnyObject) {
         var task = NSTask()
         

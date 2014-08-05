@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="6205" systemVersion="13E28" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
-        <deployment defaultVersion="101000" identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="6205"/>
     </dependencies>
     <objects>
@@ -15,6 +14,7 @@
         <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="MainFrameStatusBar" customModuleProvider="target">
             <connections>
                 <outlet property="about" destination="Hzx-lU-njO" id="817-FM-csE"/>
+                <outlet property="details" destination="QvC-M9-y7g" id="1A8-Kb-6IL"/>
                 <outlet property="menu" destination="brM-qB-2UZ" id="J2o-o2-urI"/>
                 <outlet property="prefs" destination="dOZ-gH-c37" id="alc-8D-h9i"/>
             </connections>
@@ -24,7 +24,7 @@
             <windowStyleMask key="styleMask" titled="YES" closable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="335" y="390" width="418" height="299"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1028"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1178"/>
             <view key="contentView" id="EiT-Mj-1SZ">
                 <rect key="frame" x="0.0" y="0.0" width="418" height="299"/>
                 <autoresizingMask key="autoresizingMask"/>
@@ -80,6 +80,9 @@ email: vorstand@kreativitaet-trifft-technik.de</string>
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                             <font key="font" metaFont="system"/>
                         </buttonCell>
+                        <connections>
+                            <action selector="refreshDetails:" target="QvC-M9-y7g" id="0HA-jJ-x46"/>
+                        </connections>
                     </button>
                     <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="c3A-39-rjL">
                         <rect key="frame" x="97" y="237" width="238" height="22"/>
@@ -91,15 +94,26 @@ email: vorstand@kreativitaet-trifft-technik.de</string>
                     </textField>
                 </subviews>
             </view>
-            <point key="canvasLocation" x="-65" y="154.5"/>
+            <connections>
+                <outlet property="detailsView" destination="EiT-Mj-1SZ" id="hwr-ix-ebU"/>
+                <outlet property="refreshDetails" destination="EiT-Mj-1SZ" id="oYx-XD-Y7V"/>
+                <outlet property="websiteField" destination="c3A-39-rjL" id="QJm-eT-zAg"/>
+            </connections>
+            <point key="canvasLocation" x="-92" y="147.5"/>
         </window>
         <menu id="brM-qB-2UZ">
             <items>
                 <menuItem title="Refresh Status" id="qYi-ja-TG0">
                     <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="refresh:" target="Voe-Tx-rLC" id="Wll-75-WAH"/>
+                    </connections>
                 </menuItem>
                 <menuItem title="MainFrame Details" id="TJg-AK-JUu">
                     <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="showDetailsView:" target="Voe-Tx-rLC" id="Hf6-dZ-y3g"/>
+                    </connections>
                 </menuItem>
                 <menuItem title="Preferences" id="OYz-Rd-zyQ">
                     <modifierMask key="keyEquivalentModifierMask"/>
@@ -174,7 +188,7 @@ https://github.com/kerker00/mainFrameStatusBar</string>
             </view>
             <point key="canvasLocation" x="394" y="-92"/>
         </window>
-        <window title="Preferences" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="dOZ-gH-c37">
+        <window title="Preferences" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="dOZ-gH-c37" customClass="PreferencePane" customModule="MainFrameStatusBar">
             <windowStyleMask key="styleMask" titled="YES" closable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="196" y="240" width="462" height="167"/>
