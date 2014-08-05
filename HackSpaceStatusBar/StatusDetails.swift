@@ -9,11 +9,6 @@
 import Cocoa
 
 class StatusDetails: NSWindow {
+
     
-    @IBOutlet weak var view: NSView!
-    @IBOutlet weak var website: NSTextField!
-    
-    @IBAction func refreshDetails(sender: AnyObject) {
-            website.setStringValue("Hello")
-    }
 }

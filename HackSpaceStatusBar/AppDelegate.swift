@@ -7,6 +7,7 @@
 //
 
 import Cocoa
+import AppKit
 
 class AppDelegate: NSObject, NSApplicationDelegate {
                             
@@ -15,18 +16,18 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     @IBOutlet weak var prefs: NSWindow!
     @IBOutlet weak var about: NSWindow!
     
-    @IBOutlet weak var details: StatusDetails!
-    
     
     var statusItem: NSStatusItem!
-    var timer : NSTimer? = nil
+    var timer : NSTimer = NSTimer()
     
     override func awakeFromNib()  {
-        var myInt = NSInteger(NSVariableStatusItemLength)
-        statusItem = NSStatusBar.systemStatusBar().statusItemWithLength(CGFloat(myInt))
-        statusItem.setMenu(menu)
+       //  var myInt = NSInteger(NSVariableStatusItemLength)
+        statusItem = NSStatusBar.systemStatusBar().statusItemWithLength(CGFloat(-2))
 
-        statusItem.setHighlightMode(true)
+        statusItem.menu = menu
+            // setMenu(menu)
+
+        statusItem.highlightMode = true
         
         self.getStatus()
         
@@ -39,8 +40,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
     func applicationDidFinishLaunching(aNotification: NSNotification?) {
         
-        if timer {
-            timer!.invalidate()
+        if timer.valid {
+            timer.invalidate()
         }
         
         timer = NSTimer.scheduledTimerWithTimeInterval(120.0, repeats: true) {
@@ -52,18 +53,20 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         // Insert code here to tear down your application
     }
 
-    @IBAction func showDetailsView(sender: AnyObject) {
-        NSApp.activateIgnoringOtherApps(true)
-        details.makeKeyAndOrderFront(nil)
-    }
+//    @IBAction func showDetailsView(sender: AnyObject) {
+//        NSApp.activateIgnoringOtherApps(true)
+//        details.makeKeyAndOrderFront(nil)
+//    }
     
     @IBAction func showAboutView(sender: AnyObject) {
         NSApp.activateIgnoringOtherApps(true)
+        about.center()
         about.makeKeyAndOrderFront(nil)
     }
     
     @IBAction func showPrefView(sender: AnyObject) {
         NSApp.activateIgnoringOtherApps(true)
+        prefs.center()
         prefs.makeKeyAndOrderFront(nil)
     }
     
@@ -82,23 +85,18 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         
     }
     
-    
-    @IBAction func refreshStatus(sender: AnyObject) {
-        self.getStatus()
-    }
-    
     func getStatus() {
         if let myAnswer = self.getJSON("http://status.kreativitaet-trifft-technik.de/api/openState") {
             if(self.parseJSON(myAnswer).valueForKey("state") as NSString == "off") {
-                self.statusItem.setTitle("C")
+                self.statusItem.title = "C"
                 println("Closed")
             } else {
-                self.statusItem.setTitle("O")
+                self.statusItem.title = "O"
                 println("Open")
             }
             
         } else {
-            self.statusItem.setTitle("X")
+            self.statusItem.title = "X"
             println("Unknown")
         }
     }
@@ -108,10 +106,10 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         var args: NSMutableArray
         args = NSMutableArray()
         args.addObject("-c")
-        args.addObject("sleep 0.2; open \"\(NSBundle.mainBundle().bundlePath())\"")
+        args.addObject("sleep 0.2; open \"\(NSBundle.mainBundle().bundlePath)\"")
         
-        task.setLaunchPath("/bin/sh")
-        task.setArguments(args)
+        task.launchPath = "/bin/sh"
+        task.arguments = args
         task.launch()
         NSApplication.sharedApplication().terminate(nil)
     }
