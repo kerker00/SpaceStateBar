@@ -20,6 +20,60 @@
             </connections>
         </customObject>
         <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
+        <menu title="Main Menu" systemMenu="main" id="e2R-Fg-beG">
+            <items>
+                <menuItem title="MainFrameStatusBar" id="439-qW-8YF">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <menu key="submenu" title="MainFrameStatusBar" systemMenu="apple" id="Q7g-a5-bAf">
+                        <items>
+                            <menuItem title="About asdf" id="MGy-P9-OYP">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                            </menuItem>
+                            <menuItem isSeparatorItem="YES" id="3rM-4n-aex"/>
+                            <menuItem title="Preferences…" keyEquivalent="," id="d8r-Hq-7kl"/>
+                            <menuItem isSeparatorItem="YES" id="fE7-6h-Zjj"/>
+                            <menuItem title="Services" id="gOS-sR-ojh">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <menu key="submenu" title="Services" systemMenu="services" id="hse-jC-41C"/>
+                            </menuItem>
+                            <menuItem isSeparatorItem="YES" id="8zI-xi-HtL"/>
+                            <menuItem title="Hide MainFrameStatusBar" keyEquivalent="h" id="sUJ-aW-I8p"/>
+                            <menuItem title="Hide Others" keyEquivalent="h" id="d4l-TV-SEJ">
+                                <modifierMask key="keyEquivalentModifierMask" option="YES" command="YES"/>
+                            </menuItem>
+                            <menuItem title="Show All" id="YL6-RG-oxO">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                            </menuItem>
+                            <menuItem isSeparatorItem="YES" id="ldf-47-AUd"/>
+                            <menuItem title="Quit MainFrameStatusBar" keyEquivalent="q" id="Ho2-0g-xfe"/>
+                        </items>
+                    </menu>
+                </menuItem>
+                <menuItem title="Window" id="Qsg-WM-5D9">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <menu key="submenu" title="Window" systemMenu="window" id="tMf-dV-Liu">
+                        <items>
+                            <menuItem title="Minimize" keyEquivalent="m" id="ZxG-de-HeE"/>
+                            <menuItem title="Zoom" id="cWX-GO-yuG">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                            </menuItem>
+                            <menuItem isSeparatorItem="YES" id="Z9B-qA-952"/>
+                            <menuItem title="Bring All to Front" id="ht4-g9-JXj">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                            </menuItem>
+                        </items>
+                    </menu>
+                </menuItem>
+                <menuItem title="Help" id="HZb-Yd-aey">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <menu key="submenu" title="Help" systemMenu="help" id="MS6-z0-jTO">
+                        <items>
+                            <menuItem title="MainFrameStatusBar Help" keyEquivalent="?" id="Ew9-9v-Ssb"/>
+                        </items>
+                    </menu>
+                </menuItem>
+            </items>
+        </menu>
         <window title="Main Frame Status" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="QvC-M9-y7g" customClass="StatusDetails" customModule="MainFrameStatusBar">
             <windowStyleMask key="styleMask" titled="YES" closable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
@@ -135,7 +189,7 @@ email: vorstand@kreativitaet-trifft-technik.de</string>
                     </connections>
                 </menuItem>
             </items>
-            <point key="canvasLocation" x="312.5" y="154.5"/>
+            <point key="canvasLocation" x="343.5" y="412.5"/>
         </menu>
         <window title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="Hzx-lU-njO">
             <windowStyleMask key="styleMask" titled="YES" closable="YES"/>
