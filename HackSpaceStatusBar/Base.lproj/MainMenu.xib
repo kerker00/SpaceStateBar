@@ -23,57 +23,12 @@
         <window title="Main Frame Status" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="QvC-M9-y7g" customClass="StatusDetails" customModule="MainFrameStatusBar">
             <windowStyleMask key="styleMask" titled="YES" closable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
-            <rect key="contentRect" x="335" y="390" width="418" height="299"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1178"/>
+            <rect key="contentRect" x="335" y="390" width="418" height="314"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1028"/>
             <view key="contentView" id="EiT-Mj-1SZ">
-                <rect key="frame" x="0.0" y="0.0" width="418" height="299"/>
+                <rect key="frame" x="0.0" y="0.0" width="418" height="314"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GM3-kf-ezM">
-                        <rect key="frame" x="34" y="242" width="57" height="17"/>
-                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="Website:" id="MLW-DU-ny4">
-                            <font key="font" metaFont="system"/>
-                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                        </textFieldCell>
-                    </textField>
-                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rp8-B2-EmC">
-                        <rect key="frame" x="30" y="215" width="59" height="17"/>
-                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="Address:" id="jWp-sx-ktG">
-                            <font key="font" metaFont="system"/>
-                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                        </textFieldCell>
-                    </textField>
-                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Nay-nE-KuL">
-                        <rect key="frame" x="34" y="171" width="57" height="17"/>
-                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="Contact:" id="6LA-zE-aJg">
-                            <font key="font" metaFont="system"/>
-                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                        </textFieldCell>
-                    </textField>
-                    <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Tm4-ae-wVm">
-                        <rect key="frame" x="96" y="132" width="296" height="56"/>
-                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" sendsActionOnEndEditing="YES" state="on" drawsBackground="YES" id="REc-H5-507">
-                            <font key="font" metaFont="system"/>
-                            <string key="title">irc: irc://freenode/#hsol
-twitter: @HackspaceOL
-email: vorstand@kreativitaet-trifft-technik.de</string>
-                            <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                            <color key="backgroundColor" white="1" alpha="0.0" colorSpace="deviceWhite"/>
-                        </textFieldCell>
-                    </textField>
-                    <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="f5W-Cv-QC8">
-                        <rect key="frame" x="95" y="198" width="313" height="34"/>
-                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" sendsActionOnEndEditing="YES" state="on" drawsBackground="YES" id="mR5-uv-I9W">
-                            <font key="font" metaFont="system"/>
-                            <string key="title">Raiffeisenstrasse 27 
-26122 Oldenburg, Germany</string>
-                            <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                            <color key="backgroundColor" white="1" alpha="0.0" colorSpace="deviceWhite"/>
-                        </textFieldCell>
-                    </textField>
                     <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oig-77-qBN">
                         <rect key="frame" x="161" y="26" width="87" height="32"/>
                         <buttonCell key="cell" type="push" title="Refresh" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="kDu-FI-Vmf">
@@ -84,8 +39,53 @@ email: vorstand@kreativitaet-trifft-technik.de</string>
                             <action selector="refreshDetails:" target="QvC-M9-y7g" id="0HA-jJ-x46"/>
                         </connections>
                     </button>
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GM3-kf-ezM">
+                        <rect key="frame" x="33" y="203" width="57" height="17"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="Website:" id="MLW-DU-ny4">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rp8-B2-EmC">
+                        <rect key="frame" x="29" y="176" width="59" height="17"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="Address:" id="jWp-sx-ktG">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Nay-nE-KuL">
+                        <rect key="frame" x="33" y="132" width="57" height="17"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="Contact:" id="6LA-zE-aJg">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Tm4-ae-wVm">
+                        <rect key="frame" x="95" y="93" width="296" height="56"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" sendsActionOnEndEditing="YES" state="on" drawsBackground="YES" id="REc-H5-507">
+                            <font key="font" metaFont="system"/>
+                            <string key="title">irc: irc://freenode/#hsol
+twitter: @HackspaceOL
+email: vorstand@kreativitaet-trifft-technik.de</string>
+                            <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" white="1" alpha="0.0" colorSpace="deviceWhite"/>
+                        </textFieldCell>
+                    </textField>
+                    <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="f5W-Cv-QC8">
+                        <rect key="frame" x="94" y="159" width="313" height="34"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" sendsActionOnEndEditing="YES" state="on" drawsBackground="YES" id="mR5-uv-I9W">
+                            <font key="font" metaFont="system"/>
+                            <string key="title">Raiffeisenstrasse 27 
+26122 Oldenburg, Germany</string>
+                            <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" white="1" alpha="0.0" colorSpace="deviceWhite"/>
+                        </textFieldCell>
+                    </textField>
                     <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="c3A-39-rjL">
-                        <rect key="frame" x="97" y="237" width="238" height="22"/>
+                        <rect key="frame" x="96" y="198" width="238" height="22"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" sendsActionOnEndEditing="YES" state="on" title="http://mainframe.io/" drawsBackground="YES" id="ZRg-f2-dGs">
                             <font key="font" metaFont="system"/>
                             <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
@@ -99,7 +99,7 @@ email: vorstand@kreativitaet-trifft-technik.de</string>
                 <outlet property="refreshDetails" destination="EiT-Mj-1SZ" id="oYx-XD-Y7V"/>
                 <outlet property="websiteField" destination="c3A-39-rjL" id="QJm-eT-zAg"/>
             </connections>
-            <point key="canvasLocation" x="-92" y="147.5"/>
+            <point key="canvasLocation" x="-92" y="140"/>
         </window>
         <menu id="brM-qB-2UZ">
             <items>
@@ -222,7 +222,7 @@ https://github.com/kerker00/mainFrameStatusBar</string>
                         </textFieldCell>
                     </textField>
                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="I4n-95-vEP">
-                        <rect key="frame" x="314" y="70" width="24" height="17"/>
+                        <rect key="frame" x="320" y="70" width="13" height="17"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="s" id="lFF-LP-yQ7">
                             <font key="font" metaFont="system"/>
                             <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
@@ -237,6 +237,9 @@ https://github.com/kerker00/mainFrameStatusBar</string>
                             <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
+                        <connections>
+                            <action selector="setRequestTimerInterval:" target="dOZ-gH-c37" id="DyF-jN-NCR"/>
+                        </connections>
                     </textField>
                     <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="egR-ob-a7C">
                         <rect key="frame" x="264" y="96" width="163" height="18"/>
@@ -244,6 +247,9 @@ https://github.com/kerker00/mainFrameStatusBar</string>
                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                             <font key="font" metaFont="system"/>
                         </buttonCell>
+                        <connections>
+                            <action selector="showHideDockIcon:" target="dOZ-gH-c37" id="iS7-cA-64I"/>
+                        </connections>
                     </button>
                     <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xrh-Nx-DkO">
                         <rect key="frame" x="264" y="120" width="22" height="18"/>
@@ -251,6 +257,9 @@ https://github.com/kerker00/mainFrameStatusBar</string>
                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                             <font key="font" metaFont="system"/>
                         </buttonCell>
+                        <connections>
+                            <action selector="startAtLogin:" target="dOZ-gH-c37" id="Y67-EP-V60"/>
+                        </connections>
                     </button>
                     <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wBp-Tf-oWS">
                         <rect key="frame" x="124" y="13" width="215" height="32"/>
@@ -259,11 +268,15 @@ https://github.com/kerker00/mainFrameStatusBar</string>
                             <font key="font" metaFont="system"/>
                         </buttonCell>
                         <connections>
-                            <action selector="restartApp:" target="Voe-Tx-rLC" id="1b2-IE-uKf"/>
+                            <action selector="restartMainFrameStatusBar:" target="dOZ-gH-c37" id="9Vu-Xm-uY5"/>
                         </connections>
                     </button>
                 </subviews>
             </view>
+            <connections>
+                <outlet property="prefView" destination="WOU-mM-Lh6" id="yFM-CF-FlJ"/>
+                <outlet property="restartMainFrameStatusBar" destination="wBp-Tf-oWS" id="Wyl-64-xPu"/>
+            </connections>
             <point key="canvasLocation" x="-87" y="-173.5"/>
         </window>
         <customObject id="ocQ-WA-jPz" customClass="StatusDetails" customModule="MainFrameStatusBar" customModuleProvider="target"/>

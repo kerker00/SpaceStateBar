@@ -17,5 +17,4 @@ class StatusDetails: NSWindow {
     @IBAction func refreshDetails(sender: AnyObject) {
         websiteField.stringValue = "hallo"
     }
-    
 }

@@ -10,7 +10,7 @@ This is a small Mac OSX Menu Application that will show the status of the hacksp
 The status is requested from the status web site of the hackspace.   
 [http://status.kreativitaet-trifft-technik.de](http://status.kreativitaet-trifft-technik.de)  
 The api and site source can be found here:    
-[https://github.com/ktt-ol/spacestatus](https://github.com/ktt-ol/spacestatus)   
+[https://github.com/spaceapi](https://github.com/spaceapi)   
 
 
 ## Details

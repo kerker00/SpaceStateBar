@@ -21,6 +21,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     var statusItem: NSStatusItem!
     var timer : NSTimer = NSTimer()
     
+    var mainFrameStatus : StatusHandler?
+    
     override func awakeFromNib()  {
        //  var myInt = NSInteger(NSVariableStatusItemLength)
         statusItem = NSStatusBar.systemStatusBar().statusItemWithLength(CGFloat(-2))
@@ -30,10 +32,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
         statusItem.highlightMode = true
         
-        self.getStatus()
+        mainFrameStatus = StatusHandler()
         
-        self.getDetails()
-        
+        statusItem.title = mainFrameStatus?.status        
     }
     
     @IBAction func quit(sender: AnyObject) {
@@ -46,7 +47,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         }
         
         timer = NSTimer.scheduledTimerWithTimeInterval(120.0, repeats: true) {
-            self.getStatus()
+             self.statusItem.title = self.mainFrameStatus?.status
         }
     }
 
@@ -72,54 +73,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         prefs.makeKeyAndOrderFront(nil)
     }
     
-    func getJSON(urlToRequest: String) -> NSData?{
-        return NSData(contentsOfURL: NSURL(string: urlToRequest))
-    }
-    
-    func parseJSON(inputData: NSData) -> NSDictionary{
-        var error: NSError?
-        var boardsDictionary: NSDictionary = NSJSONSerialization.JSONObjectWithData(inputData, options: NSJSONReadingOptions.MutableContainers, error: &error) as NSDictionary
-        
-        return boardsDictionary
-    }
-    
-    func getDetails(){
-        
-    }
-    
-    
     @IBAction func refresh(sender: AnyObject) {
-        self.getStatus()
-    }
-    
-    func getStatus() {
-        if let myAnswer = self.getJSON("http://status.kreativitaet-trifft-technik.de/api/openState") {
-            if(self.parseJSON(myAnswer).valueForKey("state") as NSString == "off") {
-                self.statusItem.title = "C"
-                println("Closed")
-            } else {
-                self.statusItem.title = "O"
-                println("Open")
-            }
-            
-        } else {
-            self.statusItem.title = "X"
-            println("Unknown")
-        }
-    }
-    
-    @IBAction func restartApp(sender: AnyObject) {
-        var task = NSTask()
-        
-        var args: NSMutableArray
-        args = NSMutableArray()
-        args.addObject("-c")
-        args.addObject("sleep 0.2; open \"\(NSBundle.mainBundle().bundlePath)\"")
-        
-        task.launchPath = "/bin/sh"
-        task.arguments = args
-        task.launch()
-        NSApplication.sharedApplication().terminate(nil)
+        self.statusItem.title = self.mainFrameStatus?.status
     }
 }
 
