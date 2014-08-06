@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>requestTimer</key>
+	<integer>121</integer>
+	<key>showDockIcon</key>
+	<false/>
+	<key>startOtLogin</key>
+	<false/>
+	<key>website</key>
+	<string>http://status.mainframe.io/api/</string>
+</dict>
+</plist>

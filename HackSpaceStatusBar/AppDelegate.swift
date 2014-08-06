@@ -7,6 +7,7 @@
 //
 
 import Cocoa
+import ApplicationServices
 
 class AppDelegate: NSObject, NSApplicationDelegate {
                             
@@ -42,6 +43,10 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
     func applicationDidFinishLaunching(aNotification: NSNotification?) {
         
+        if(!NSUserDefaults.standardUserDefaults().boolForKey("LaunchAsAgentApp")) {
+            
+        }
+        
         if timer.valid {
             timer.invalidate()
         }
@@ -51,6 +56,20 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         }
     }
 
+    func applicationWillFinishLaunching(notification: NSNotification!) {
+        var NSApp: NSApplication = NSApplication.sharedApplication()
+        if(!NSUserDefaults.standardUserDefaults().boolForKey("LaunchAsAgentApp")){
+           NSApp.setActivationPolicy(NSApplicationActivationPolicy.Regular)
+        } else {
+            NSApp.setActivationPolicy(NSApplicationActivationPolicy.Accessory)
+        }
+        
+        var defaultPrefsFile = NSBundle.mainBundle().URLForResource("DefaultPreferences", withExtension: "plist")
+        
+        var defaultPrefs : NSDictionary = NSDictionary(contentsOfURL: defaultPrefsFile)
+        NSUserDefaults.standardUserDefaults().registerDefaults(defaultPrefs)
+    }
+    
     func applicationWillTerminate(aNotification: NSNotification?) {
         // Insert code here to tear down your application
     }

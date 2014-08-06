@@ -7,17 +7,36 @@
 //
 
 import Cocoa
+import ApplicationServices
 
 class PreferencePane: NSWindow {
 
+    
+    
     @IBOutlet weak var prefView: NSView!
+   
+    
+    
+    func setDefaultSettings(settings: NSDictionary) {
+        
+    }
     
     @IBAction func startAtLogin(sender: AnyObject) {
+   
+    }
+    
+    @IBAction func setHackSpaceApiEndPoint(sender: AnyObject) {
         
     }
     
     @IBAction func showHideDockIcon(sender: AnyObject) {
-        
+        var showDockIcon = sender as NSButton
+        if(showDockIcon.state == NSOnState){
+            NSUserDefaults.standardUserDefaults().setBool(true, forKey: "showDockIcon")
+        } else {
+            NSUserDefaults.standardUserDefaults().setBool(false, forKey: "showDockIcon")
+        }
+        println(NSUserDefaults.standardUserDefaults().boolForKey("showDockIcon"))
     }
     
     @IBAction func setRequestTimerInterval(sender: AnyObject) {
