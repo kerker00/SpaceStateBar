@@ -29,6 +29,7 @@
 		2860729819842C7800ED3E11 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2860729D19842C7800ED3E11 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		286C62261992164A00468556 /* DefaultPreferences.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = DefaultPreferences.plist; path = HackSpaceStatusBar/Settings/DefaultPreferences.plist; sourceTree = "<group>"; };
+		288739121992317C00993025 /* MainFrameStatusBar.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = MainFrameStatusBar.entitlements; sourceTree = "<group>"; };
 		28D639ED199147CA00535021 /* StatusHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusHandler.swift; sourceTree = "<group>"; };
 		28E6C05D19856F0A00FCC04A /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
 		28E6C0631985729800FCC04A /* PreferencePane.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreferencePane.swift; sourceTree = "<group>"; };
@@ -64,6 +65,7 @@
 		2860729319842C7800ED3E11 /* HackSpaceStatusBar */ = {
 			isa = PBXGroup;
 			children = (
+				288739121992317C00993025 /* MainFrameStatusBar.entitlements */,
 				280D482D1985502D00F00D58 /* Images.xcassets */,
 				2860729819842C7800ED3E11 /* AppDelegate.swift */,
 				2860729C19842C7800ED3E11 /* MainMenu.xib */,
@@ -127,6 +129,11 @@
 				TargetAttributes = {
 					2860729019842C7800ED3E11 = {
 						CreatedOnToolsVersion = 6.0;
+						SystemCapabilities = {
+							com.apple.Sandbox = {
+								enabled = 0;
+							};
+						};
 					};
 				};
 			};

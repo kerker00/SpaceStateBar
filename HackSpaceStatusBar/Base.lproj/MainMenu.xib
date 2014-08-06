@@ -246,7 +246,7 @@ https://github.com/kerker00/mainFrameStatusBar</string>
             <windowStyleMask key="styleMask" titled="YES" closable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="196" y="240" width="484" height="193"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1178"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1028"/>
             <view key="contentView" id="WOU-mM-Lh6">
                 <rect key="frame" x="0.0" y="0.0" width="484" height="193"/>
                 <autoresizingMask key="autoresizingMask"/>
@@ -358,10 +358,14 @@ https://github.com/kerker00/mainFrameStatusBar</string>
                 </subviews>
             </view>
             <connections>
+                <outlet property="atLogin" destination="xrh-Nx-DkO" id="545-5f-wzt"/>
+                <outlet property="dockIcon" destination="egR-ob-a7C" id="Ufr-sZ-CK8"/>
                 <outlet property="prefView" destination="WOU-mM-Lh6" id="yFM-CF-FlJ"/>
                 <outlet property="restartMainFrameStatusBar" destination="wBp-Tf-oWS" id="Wyl-64-xPu"/>
+                <outlet property="timerInterval" destination="xPu-mI-doE" id="DhW-9w-bcq"/>
+                <outlet property="webSite" destination="QGi-K2-Lu3" id="MYh-jE-M1H"/>
             </connections>
-            <point key="canvasLocation" x="-76" y="-207.5"/>
+            <point key="canvasLocation" x="228" y="-366.5"/>
         </window>
         <customObject id="ocQ-WA-jPz" customClass="StatusDetails" customModule="MainFrameStatusBar" customModuleProvider="target"/>
     </objects>

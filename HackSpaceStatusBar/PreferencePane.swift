@@ -15,14 +15,39 @@ class PreferencePane: NSWindow {
     
     @IBOutlet weak var prefView: NSView!
    
+    @IBOutlet weak var atLogin: NSButton!
+    
+    @IBOutlet weak var dockIcon: NSButton!
+    
+    @IBOutlet weak var timerInterval: NSTextField!
+    
+    @IBOutlet weak var webSite: NSTextField!
     
     
     func setDefaultSettings(settings: NSDictionary) {
+        if(settings.valueForKey("showDockIcon") as Bool) {
+            dockIcon.state = NSOnState
+        } else {
+            dockIcon.state = NSOffState
+        }
         
+        if(settings.valueForKey("startOtLogin") as Bool) {
+            atLogin.state = NSOnState
+        } else {
+            atLogin.state = NSOffState
+        }
+        
+        timerInterval.stringValue = String(settings.valueForKey("requestTimer") as Int)
+        webSite.stringValue = settings.valueForKey("website") as NSString
     }
     
     @IBAction func startAtLogin(sender: AnyObject) {
-   
+        var showDockIcon = sender as NSButton
+        if(showDockIcon.state == NSOnState){
+            dockIcon.state = NSOnState
+        } else {
+            dockIcon.state = NSOffState
+        }
     }
     
     @IBAction func setHackSpaceApiEndPoint(sender: AnyObject) {
@@ -54,6 +79,11 @@ class PreferencePane: NSWindow {
         task.launchPath = "/bin/sh"
         task.arguments = args
         task.launch()
+        
+//        var id = NSBundle.mainBundle().bundleIdentifier
+//        var workSpace = NSWorkspace()
+//        workSpace.launchAppWithBundleIdentifier(id, options: NSWorkspaceLaunchOptions.Default | NSWorkspaceLaunchOptions.NewInstance | NSWorkspaceLaunchOptions.Async, additionalEventParamDescriptor: nil, launchIdentifier: nil)
+//        
         NSApplication.sharedApplication().terminate(nil)
     }
     

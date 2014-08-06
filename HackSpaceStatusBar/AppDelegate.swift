@@ -13,16 +13,20 @@ class AppDelegate: NSObject, NSApplicationDelegate {
                             
   
     @IBOutlet weak var menu: NSMenu!
-    @IBOutlet weak var prefs: NSWindow!
+    
     @IBOutlet weak var about: NSWindow!
     
-    
+    @IBOutlet weak var prefs: PreferencePane!
     @IBOutlet weak var details: StatusDetails!
     
     var statusItem: NSStatusItem!
     var timer : NSTimer = NSTimer()
     
     var mainFrameStatus : StatusHandler?
+    
+    var defaultPrefs : NSDictionary!
+    
+    var userDefault : NSUserDefaults!
     
     override func awakeFromNib()  {
        //  var myInt = NSInteger(NSVariableStatusItemLength)
@@ -35,7 +39,36 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         
         mainFrameStatus = StatusHandler()
         
-        statusItem.title = mainFrameStatus?.status        
+        self.userDefault = NSUserDefaults.standardUserDefaults()
+        
+        if let defaultPrefLoaded = userDefault.objectForKey("defaultPrefLoaded") as? Bool {
+            var defaultPrefsFile = NSBundle.mainBundle().URLForResource("DefaultPreferences", withExtension: "plist")
+            self.defaultPrefs = NSDictionary(contentsOfURL: defaultPrefsFile)
+
+            if(defaultPrefLoaded) {
+                println("already loaded \(defaultPrefLoaded)")
+                
+                self.defaultPrefs = NSDictionary(contentsOfURL: defaultPrefsFile)
+                
+                
+                self.defaultPrefs.writeToFile("\(NSHomeDirectory())/file.plist", atomically: true)            
+            } else {
+                println("now loaded")
+                self.userDefault.setObject(self.defaultPrefs, forKey: "defaultPrefs")
+                self.userDefault.setObject(true, forKey: "defaultPrefLoaded")
+                self.defaultPrefs.writeToFile("\(NSHomeDirectory())/file.plist", atomically: true)
+            }
+        } else {
+            println("now loaded")
+            self.userDefault.setObject(self.defaultPrefs, forKey: "defaultPrefs")
+            self.defaultPrefs.writeToFile("\(NSHomeDirectory())/file.plist", atomically: true)
+            userDefault.setObject(true, forKey: "defaultPrefLoaded")
+        }
+        userDefault.setObject(false, forKey: "defaultPrefLoaded")
+        userDefault.synchronize()
+        
+        println(NSHomeDirectory())
+        
     }
     
     @IBAction func quit(sender: AnyObject) {
@@ -43,9 +76,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
     func applicationDidFinishLaunching(aNotification: NSNotification?) {
         
-        if(!NSUserDefaults.standardUserDefaults().boolForKey("LaunchAsAgentApp")) {
-            
-        }
+        statusItem.title = mainFrameStatus?.status
         
         if timer.valid {
             timer.invalidate()
@@ -57,21 +88,21 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
 
     func applicationWillFinishLaunching(notification: NSNotification!) {
+        
+        var showDock = self.defaultPrefs.valueForKey("showDockIcon") as Bool
+        self.prefs.setDefaultSettings(self.userDefault.valueForKey("defaultPrefs") as NSDictionary)
+        
         var NSApp: NSApplication = NSApplication.sharedApplication()
-        if(!NSUserDefaults.standardUserDefaults().boolForKey("LaunchAsAgentApp")){
+        if(showDock){
            NSApp.setActivationPolicy(NSApplicationActivationPolicy.Regular)
         } else {
             NSApp.setActivationPolicy(NSApplicationActivationPolicy.Accessory)
         }
-        
-        var defaultPrefsFile = NSBundle.mainBundle().URLForResource("DefaultPreferences", withExtension: "plist")
-        
-        var defaultPrefs : NSDictionary = NSDictionary(contentsOfURL: defaultPrefsFile)
-        NSUserDefaults.standardUserDefaults().registerDefaults(defaultPrefs)
     }
     
     func applicationWillTerminate(aNotification: NSNotification?) {
         // Insert code here to tear down your application
+        
     }
 
     @IBAction func showDetailsView(sender: AnyObject) {
