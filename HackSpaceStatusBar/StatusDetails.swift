@@ -10,10 +10,17 @@ import Cocoa
 
 class StatusDetails: NSWindow {
     
+    @IBOutlet weak var websiteButton: NSButton!
     @IBOutlet weak var detailsView: NSView!
     @IBOutlet weak var websiteField: NSTextField!
  
     @IBAction func refreshDetails(sender: AnyObject) {
         websiteField.stringValue = "hallo"
-    }    
+    }
+    
+    @IBAction func openWebsite(sender: AnyObject) {
+            NSWorkspace.sharedWorkspace().openURL(NSURL.URLWithString("http://status.mainframe.io"))
+    }
+    
+   
 }

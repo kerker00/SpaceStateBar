@@ -78,21 +78,11 @@
             <windowStyleMask key="styleMask" titled="YES" closable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="335" y="390" width="418" height="314"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1028"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1178"/>
             <view key="contentView" id="EiT-Mj-1SZ">
                 <rect key="frame" x="0.0" y="0.0" width="418" height="314"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oig-77-qBN">
-                        <rect key="frame" x="161" y="26" width="87" height="32"/>
-                        <buttonCell key="cell" type="push" title="Refresh" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="kDu-FI-Vmf">
-                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                            <font key="font" metaFont="system"/>
-                        </buttonCell>
-                        <connections>
-                            <action selector="refreshDetails:" target="QvC-M9-y7g" id="0HA-jJ-x46"/>
-                        </connections>
-                    </button>
                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GM3-kf-ezM">
                         <rect key="frame" x="33" y="203" width="57" height="17"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="Website:" id="MLW-DU-ny4">
@@ -146,11 +136,33 @@ email: vorstand@kreativitaet-trifft-technik.de</string>
                             <color key="backgroundColor" white="1" alpha="0.0" colorSpace="deviceWhite"/>
                         </textFieldCell>
                     </textField>
+                    <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oig-77-qBN">
+                        <rect key="frame" x="215" y="13" width="87" height="32"/>
+                        <buttonCell key="cell" type="push" title="Refresh" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="kDu-FI-Vmf">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="refreshDetails:" target="QvC-M9-y7g" id="0HA-jJ-x46"/>
+                        </connections>
+                    </button>
+                    <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CWM-fQ-1Ed">
+                        <rect key="frame" x="116" y="13" width="89" height="32"/>
+                        <buttonCell key="cell" type="push" title="Website" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Bfk-FX-lGP">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="openWebsite:" target="QvC-M9-y7g" id="WbQ-Eo-5za"/>
+                        </connections>
+                    </button>
                 </subviews>
             </view>
             <connections>
                 <outlet property="detailsView" destination="EiT-Mj-1SZ" id="hwr-ix-ebU"/>
+                <outlet property="openWebSite" destination="CWM-fQ-1Ed" id="gxk-zI-hxy"/>
                 <outlet property="refreshDetails" destination="EiT-Mj-1SZ" id="oYx-XD-Y7V"/>
+                <outlet property="websiteButton" destination="CWM-fQ-1Ed" id="zFv-a6-hbb"/>
                 <outlet property="websiteField" destination="c3A-39-rjL" id="QJm-eT-zAg"/>
             </connections>
             <point key="canvasLocation" x="-92" y="140"/>
@@ -195,7 +207,7 @@ email: vorstand@kreativitaet-trifft-technik.de</string>
             <windowStyleMask key="styleMask" titled="YES" closable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="283" y="305" width="348" height="260"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1028"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1178"/>
             <view key="contentView" id="611-zl-BLt">
                 <rect key="frame" x="0.0" y="0.0" width="348" height="260"/>
                 <autoresizingMask key="autoresizingMask"/>
@@ -246,7 +258,7 @@ https://github.com/kerker00/mainFrameStatusBar</string>
             <windowStyleMask key="styleMask" titled="YES" closable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="196" y="240" width="484" height="193"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1028"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1178"/>
             <view key="contentView" id="WOU-mM-Lh6">
                 <rect key="frame" x="0.0" y="0.0" width="484" height="193"/>
                 <autoresizingMask key="autoresizingMask"/>
