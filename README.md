@@ -24,6 +24,7 @@ Some features are still in progress
 	- set/change status request interval
 - Details Window
 	- Display more details that are given by (/api/spaceInfo) 
+- make use of NSURLConnection 
 
 # Credits
 The icon is made with the help of
