@@ -10,6 +10,8 @@ import Foundation
 
 public class StatusHandler {
  
+    var jsonTool : JSONHelper = JSONHelper()
+    
     public var status: NSString? {
         get {
             return self.getStatus()
@@ -19,8 +21,8 @@ public class StatusHandler {
     func getStatus() -> NSString {
         var freshStatus: NSString = ""
         
-        if let myAnswer = self.getJSON("http://status.kreativitaet-trifft-technik.de/api/openState") {
-            if(self.parseJSON(myAnswer).valueForKey("state") as NSString == "off") {
+        if let myAnswer = jsonTool.getJSON("http://status.kreativitaet-trifft-technik.de/api/openState") {
+            if(jsonTool.parseJSON(myAnswer).valueForKey("state") as NSString == "off") {
                 freshStatus = "C"
             } else {
                 freshStatus = "O"
@@ -31,17 +33,4 @@ public class StatusHandler {
         }
         return freshStatus
     }
-
-    func getJSON(urlToRequest: String) -> NSData?{
-        return NSData(contentsOfURL: NSURL(string: urlToRequest))
-    }
-    
-    func parseJSON(inputData: NSData) -> NSDictionary{
-        var error: NSError?
-        var boardsDictionary: NSDictionary = NSJSONSerialization.JSONObjectWithData(inputData, options: NSJSONReadingOptions.MutableContainers, error: &error) as NSDictionary
-        
-        return boardsDictionary
-    }
-    
-    
 }

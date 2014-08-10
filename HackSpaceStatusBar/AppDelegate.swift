@@ -33,7 +33,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         statusItem = NSStatusBar.systemStatusBar().statusItemWithLength(CGFloat(-2))
 
         statusItem.menu = menu
-            // setMenu(menu)
 
         statusItem.highlightMode = true
         
@@ -67,8 +66,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         userDefault.setObject(false, forKey: "defaultPrefLoaded")
         userDefault.synchronize()
         
-        println(NSHomeDirectory())
-        
+        prefs.getListofSpaces()
     }
     
     @IBAction func quit(sender: AnyObject) {

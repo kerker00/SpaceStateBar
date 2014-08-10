@@ -21,8 +21,9 @@ class PreferencePane: NSWindow {
     
     @IBOutlet weak var timerInterval: NSTextField!
     
-    @IBOutlet weak var webSite: NSTextField!
+    @IBOutlet weak var listOfSpaces: NSPopUpButton!
     
+    var jsonTool : JSONHelper = JSONHelper()
     
     func setDefaultSettings(settings: NSDictionary) {
         if(settings.valueForKey("showDockIcon") as Bool) {
@@ -38,7 +39,7 @@ class PreferencePane: NSWindow {
         }
         
         timerInterval.stringValue = String(settings.valueForKey("requestTimer") as Int)
-        webSite.stringValue = settings.valueForKey("website") as NSString
+        
     }
     
     @IBAction func startAtLogin(sender: AnyObject) {
@@ -89,6 +90,24 @@ class PreferencePane: NSWindow {
     
     func saveSettings() {
         
+    }
+    
+    func getListofSpaces() {
+        var apiCallString = "http://spaceapi.net/directory.json?api=0.13"
+        var listofAvailibleSpaces : NSDictionary
+        if let supportedSpaceList = jsonTool.getJSON(apiCallString) {
+            listofAvailibleSpaces = jsonTool.parseJSON(supportedSpaceList)
+            setListOfSpaces(listofAvailibleSpaces)
+        }
+        
+    }
+    
+    func setListOfSpaces(spaceList: NSDictionary) {
+        listOfSpaces.addItemsWithTitles(spaceList.allKeys)
+    }
+    
+    func clearSpaceList(){
+        listOfSpaces.removeAllItems()
     }
     
 }
