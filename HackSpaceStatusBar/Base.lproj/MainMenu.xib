@@ -78,7 +78,7 @@
             <windowStyleMask key="styleMask" titled="YES" closable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="335" y="390" width="418" height="314"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="2560" height="1418"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1178"/>
             <view key="contentView" id="EiT-Mj-1SZ">
                 <rect key="frame" x="0.0" y="0.0" width="418" height="314"/>
                 <autoresizingMask key="autoresizingMask"/>
@@ -207,7 +207,7 @@ email: vorstand@kreativitaet-trifft-technik.de</string>
             <windowStyleMask key="styleMask" titled="YES" closable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="283" y="305" width="348" height="260"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="2560" height="1418"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1178"/>
             <view key="contentView" id="611-zl-BLt">
                 <rect key="frame" x="0.0" y="0.0" width="348" height="260"/>
                 <autoresizingMask key="autoresizingMask"/>
@@ -258,7 +258,7 @@ https://github.com/kerker00/mainFrameStatusBar</string>
             <windowStyleMask key="styleMask" titled="YES" closable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="196" y="240" width="457" height="178"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="2560" height="1418"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1178"/>
             <view key="contentView" id="WOU-mM-Lh6">
                 <rect key="frame" x="0.0" y="0.0" width="457" height="178"/>
                 <autoresizingMask key="autoresizingMask"/>
@@ -355,16 +355,31 @@ https://github.com/kerker00/mainFrameStatusBar</string>
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
+                    <popUpButton verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4yr-Td-ffY">
+                        <rect key="frame" x="250" y="134" width="190" height="26"/>
+                        <popUpButtonCell key="cell" type="push" title="Item 1" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="XKb-LD-Zad" id="hch-fm-ZXj">
+                            <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="menu"/>
+                            <menu key="menu" id="6au-5L-VNI">
+                                <items>
+                                    <menuItem title="Item 1" state="on" id="XKb-LD-Zad"/>
+                                    <menuItem title="Item 2" id="CHw-9D-055"/>
+                                    <menuItem title="Item 3" id="XzD-cE-pDU"/>
+                                </items>
+                            </menu>
+                        </popUpButtonCell>
+                    </popUpButton>
                 </subviews>
             </view>
             <connections>
                 <outlet property="atLogin" destination="xrh-Nx-DkO" id="545-5f-wzt"/>
                 <outlet property="dockIcon" destination="egR-ob-a7C" id="Ufr-sZ-CK8"/>
+                <outlet property="listOfSpaces" destination="4yr-Td-ffY" id="CRG-sM-1Ah"/>
                 <outlet property="prefView" destination="WOU-mM-Lh6" id="yFM-CF-FlJ"/>
                 <outlet property="restartMainFrameStatusBar" destination="wBp-Tf-oWS" id="Wyl-64-xPu"/>
                 <outlet property="timerInterval" destination="xPu-mI-doE" id="DhW-9w-bcq"/>
             </connections>
-            <point key="canvasLocation" x="214.5" y="-359"/>
+            <point key="canvasLocation" x="342.5" y="-465"/>
         </window>
         <customObject id="ocQ-WA-jPz" customClass="StatusDetails" customModule="MainFrameStatusBar" customModuleProvider="target"/>
     </objects>

@@ -9,8 +9,6 @@
 import Foundation
 
 public class StatusHandler {
- 
-    var jsonTool : JSONHelper = JSONHelper()
     
     public var status: NSString? {
         get {
@@ -21,16 +19,34 @@ public class StatusHandler {
     func getStatus() -> NSString {
         var freshStatus: NSString = ""
         
-        if let myAnswer = jsonTool.getJSON("http://status.kreativitaet-trifft-technik.de/api/openState") {
-            if(jsonTool.parseJSON(myAnswer).valueForKey("state") as NSString == "off") {
+        let urlPath: String = "http://status.kreativitaet-trifft-technik.de/api/openState"
+        var url: NSURL = NSURL(string: urlPath)
+        var request1: NSURLRequest = NSURLRequest(URL: url)
+
+        var response: NSURLResponse?
+        var error: NSError?
+        
+        var dataVal: NSData?
+        
+        dataVal =  NSURLConnection.sendSynchronousRequest(request1, returningResponse: &response, error: &error)
+        
+        if let myError = error {
+            freshStatus = "X"
+        } else {
+            var err: NSError
+            
+            var jsonResult: NSDictionary = NSJSONSerialization.JSONObjectWithData(dataVal, options: NSJSONReadingOptions.MutableContainers, error: nil) as NSDictionary
+
+            if(jsonResult.valueForKey("state") as NSString == "off") {
                 freshStatus = "C"
             } else {
                 freshStatus = "O"
             }
-            
-        } else {
-            freshStatus = "X"
+ 
         }
+        
+            
+        
         return freshStatus
     }
 }

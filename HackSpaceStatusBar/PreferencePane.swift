@@ -23,8 +23,6 @@ class PreferencePane: NSWindow {
     
     @IBOutlet weak var listOfSpaces: NSPopUpButton!
     
-    var jsonTool : JSONHelper = JSONHelper()
-    
     func setDefaultSettings(settings: NSDictionary) {
         if(settings.valueForKey("showDockIcon") as Bool) {
             dockIcon.state = NSOnState
@@ -81,10 +79,6 @@ class PreferencePane: NSWindow {
         task.arguments = args
         task.launch()
         
-//        var id = NSBundle.mainBundle().bundleIdentifier
-//        var workSpace = NSWorkspace()
-//        workSpace.launchAppWithBundleIdentifier(id, options: NSWorkspaceLaunchOptions.Default | NSWorkspaceLaunchOptions.NewInstance | NSWorkspaceLaunchOptions.Async, additionalEventParamDescriptor: nil, launchIdentifier: nil)
-//        
         NSApplication.sharedApplication().terminate(nil)
     }
     
@@ -93,21 +87,31 @@ class PreferencePane: NSWindow {
     }
     
     func getListofSpaces() {
-        var apiCallString = "http://spaceapi.net/directory.json?api=0.13"
-        var listofAvailibleSpaces : NSDictionary
-        if let supportedSpaceList = jsonTool.getJSON(apiCallString) {
-            listofAvailibleSpaces = jsonTool.parseJSON(supportedSpaceList)
-            setListOfSpaces(listofAvailibleSpaces)
-        }
+        
+        let urlPath: String = "http://spaceapi.net/directory.json?api=0.13"
+        var url: NSURL = NSURL(string: urlPath)
+        var request1: NSURLRequest = NSURLRequest(URL: url)
+        let queue:NSOperationQueue = NSOperationQueue()
+        
+        
+        NSURLConnection.sendAsynchronousRequest(request1, queue: queue, completionHandler:{ (response: NSURLResponse!, data: NSData!, error: NSError!) -> Void in
+            /* Your code */
+            
+            var err: NSError?
+            
+            if let myerror : NSError = error {
+                self.setListOfSpaces(NSDictionary())
+            } else {
+                var jsonResult: NSDictionary = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers, error: &err) as NSDictionary
+                self.setListOfSpaces(jsonResult)
+            }
+        })
         
     }
     
     func setListOfSpaces(spaceList: NSDictionary) {
-        listOfSpaces.addItemsWithTitles(spaceList.allKeys)
-    }
-    
-    func clearSpaceList(){
         listOfSpaces.removeAllItems()
+        var myItems = spaceList.allKeys as NSArray
+        listOfSpaces.addItemsWithTitles(myItems)
     }
-    
 }
