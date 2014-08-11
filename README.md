@@ -18,13 +18,8 @@ This app is written in Swift and is attended to test project. You can use this a
 
 ## Todos 
 Some features are still in progress
-- Settings pane with Option
-	- run as normal app (with dock icon) or not
-	- start at login or not
-	- set/change status request interval
-- Details Window
-	- Display more details that are given by (/api/spaceInfo) 
-- make use of NSURLConnection 
+- display more details given by space api 
+- cache data requested data  and store settings 
 
 # Credits
 The icon is made with the help of
