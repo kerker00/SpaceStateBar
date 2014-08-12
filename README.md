@@ -1,20 +1,16 @@
 # MainFrameStatusBar
 Disclaimer: this application is still under construction! The main function, showing the space status works well, but many features are not working. This is an alpha version! 
 ## About
-This is a small Mac OSX Menu Application that will show the status of the hackspace mainframe located in oldenburg. 
+This is a small Mac OSX Menu application that will show the status of the hackspace mainframe located in oldenburg. 
     
 - O is for Open
 - C is for Closed
 - X is for Unknown state (no connection)
 
-The status is requested from the status web site of the hackspace.   
-[http://status.kreativitaet-trifft-technik.de](http://status.kreativitaet-trifft-technik.de)  
 The api and site source can be found here:    
 [https://github.com/spaceapi](https://github.com/spaceapi)   
 
-
-## Details
-This app is written in Swift and is attended to test project. You can use this app to check if the oldenburger hackspace (Mainframe) is currently open or not. You can check the website or follow the related twitter account. But if you just want to see it in your Mac OSX Statusbar, use this application. It will require Mac OSX 10.9 or newer. 
+This application is written int the swift programming language and is attended to be a test project. 
 
 ## Todos 
 Some features are still in progress
