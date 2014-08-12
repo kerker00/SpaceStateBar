@@ -65,7 +65,6 @@
 		2860729319842C7800ED3E11 /* HackSpaceStatusBar */ = {
 			isa = PBXGroup;
 			children = (
-				28A6BAE71997FAA200BC3583 /* Helpler */,
 				288739121992317C00993025 /* MainFrameStatusBar.entitlements */,
 				280D482D1985502D00F00D58 /* Images.xcassets */,
 				2860729819842C7800ED3E11 /* AppDelegate.swift */,
@@ -97,13 +96,6 @@
 			);
 			name = Settings;
 			path = ..;
-			sourceTree = "<group>";
-		};
-		28A6BAE71997FAA200BC3583 /* Helpler */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Helpler;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

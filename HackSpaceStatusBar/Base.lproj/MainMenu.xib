@@ -78,7 +78,7 @@
             <windowStyleMask key="styleMask" titled="YES" closable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="335" y="390" width="418" height="314"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1178"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="2560" height="1418"/>
             <view key="contentView" id="EiT-Mj-1SZ">
                 <rect key="frame" x="0.0" y="0.0" width="418" height="314"/>
                 <autoresizingMask key="autoresizingMask"/>
@@ -207,7 +207,7 @@ email: vorstand@kreativitaet-trifft-technik.de</string>
             <windowStyleMask key="styleMask" titled="YES" closable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="283" y="305" width="348" height="260"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1178"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="2560" height="1418"/>
             <view key="contentView" id="611-zl-BLt">
                 <rect key="frame" x="0.0" y="0.0" width="348" height="260"/>
                 <autoresizingMask key="autoresizingMask"/>
@@ -258,7 +258,7 @@ https://github.com/kerker00/mainFrameStatusBar</string>
             <windowStyleMask key="styleMask" titled="YES" closable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="196" y="240" width="457" height="178"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1178"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="2560" height="1418"/>
             <view key="contentView" id="WOU-mM-Lh6">
                 <rect key="frame" x="0.0" y="0.0" width="457" height="178"/>
                 <autoresizingMask key="autoresizingMask"/>
@@ -368,6 +368,9 @@ https://github.com/kerker00/mainFrameStatusBar</string>
                                 </items>
                             </menu>
                         </popUpButtonCell>
+                        <connections>
+                            <action selector="setHackSpaceApiEndPoint:" target="dOZ-gH-c37" id="wl4-hi-5rp"/>
+                        </connections>
                     </popUpButton>
                 </subviews>
             </view>

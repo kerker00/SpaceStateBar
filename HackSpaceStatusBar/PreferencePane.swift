@@ -23,6 +23,8 @@ class PreferencePane: NSWindow {
     
     @IBOutlet weak var listOfSpaces: NSPopUpButton!
     
+    var spaceList : NSDictionary = NSDictionary()
+    
     func setDefaultSettings(settings: NSDictionary) {
         if(settings.valueForKey("showDockIcon") as Bool) {
             dockIcon.state = NSOnState
@@ -50,6 +52,7 @@ class PreferencePane: NSWindow {
     }
     
     @IBAction func setHackSpaceApiEndPoint(sender: AnyObject) {
+        var seletedSpace = (sender as NSPopUpButton).selectedItem
         
     }
     
@@ -60,7 +63,6 @@ class PreferencePane: NSWindow {
         } else {
             NSUserDefaults.standardUserDefaults().setBool(false, forKey: "showDockIcon")
         }
-        println(NSUserDefaults.standardUserDefaults().boolForKey("showDockIcon"))
     }
     
     @IBAction func setRequestTimerInterval(sender: AnyObject) {
@@ -104,6 +106,7 @@ class PreferencePane: NSWindow {
             } else {
                 var jsonResult: NSDictionary = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers, error: &err) as NSDictionary
                 self.setListOfSpaces(jsonResult)
+                self.spaceList = jsonResult
             }
         })
         
@@ -112,6 +115,7 @@ class PreferencePane: NSWindow {
     func setListOfSpaces(spaceList: NSDictionary) {
         listOfSpaces.removeAllItems()
         var myItems = spaceList.allKeys as NSArray
-        listOfSpaces.addItemsWithTitles(myItems)
+        var sortedItems = myItems.sortedArrayUsingSelector("compare:")
+        listOfSpaces.addItemsWithTitles(sortedItems)
     }
 }

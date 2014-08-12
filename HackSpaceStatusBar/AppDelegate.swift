@@ -25,6 +25,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     var mainFrameStatus : StatusHandler?
     
     var defaultPrefs : NSDictionary!
+    var state : NSDictionary = NSDictionary()
     
     var userDefault : NSUserDefaults!
     
@@ -45,20 +46,14 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             self.defaultPrefs = NSDictionary(contentsOfURL: defaultPrefsFile)
 
             if(defaultPrefLoaded) {
-                println("already loaded \(defaultPrefLoaded)")
-                
                 self.defaultPrefs = NSDictionary(contentsOfURL: defaultPrefsFile)
-                
-                
                 self.defaultPrefs.writeToFile("\(NSHomeDirectory())/file.plist", atomically: true)            
             } else {
-                println("now loaded")
                 self.userDefault.setObject(self.defaultPrefs, forKey: "defaultPrefs")
                 self.userDefault.setObject(true, forKey: "defaultPrefLoaded")
                 self.defaultPrefs.writeToFile("\(NSHomeDirectory())/file.plist", atomically: true)
             }
         } else {
-            println("now loaded")
             self.userDefault.setObject(self.defaultPrefs, forKey: "defaultPrefs")
             self.defaultPrefs.writeToFile("\(NSHomeDirectory())/file.plist", atomically: true)
             userDefault.setObject(true, forKey: "defaultPrefLoaded")
