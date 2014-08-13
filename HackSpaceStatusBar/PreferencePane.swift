@@ -53,7 +53,9 @@ class PreferencePane: NSWindow {
     
     @IBAction func setHackSpaceApiEndPoint(sender: AnyObject) {
         var seletedSpace = (sender as NSPopUpButton).selectedItem
-        
+        var test = NSApplication.sharedApplication().delegate as AppDelegate;
+        var state = test.state
+        state.setValue(spaceList.valueForKey(seletedSpace.title), forKey : "website")
     }
     
     @IBAction func showHideDockIcon(sender: AnyObject) {

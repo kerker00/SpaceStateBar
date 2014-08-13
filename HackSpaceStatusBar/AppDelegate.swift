@@ -9,7 +9,7 @@
 import Cocoa
 import ApplicationServices
 
-class AppDelegate: NSObject, NSApplicationDelegate {
+public class AppDelegate: NSObject, NSApplicationDelegate {
                             
   
     @IBOutlet weak var menu: NSMenu!
@@ -25,11 +25,11 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     var mainFrameStatus : StatusHandler?
     
     var defaultPrefs : NSDictionary!
-    var state : NSDictionary = NSDictionary()
+    public var state : NSMutableDictionary!
     
     var userDefault : NSUserDefaults!
     
-    override func awakeFromNib()  {
+    override public func awakeFromNib()  {
        //  var myInt = NSInteger(NSVariableStatusItemLength)
         statusItem = NSStatusBar.systemStatusBar().statusItemWithLength(CGFloat(-2))
 
@@ -38,6 +38,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         statusItem.highlightMode = true
         
         mainFrameStatus = StatusHandler()
+        
+        state = NSMutableDictionary(object: "hallo", forKey: "website")
         
         self.userDefault = NSUserDefaults.standardUserDefaults()
         
@@ -67,7 +69,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     @IBAction func quit(sender: AnyObject) {
         NSApplication.sharedApplication().terminate(nil)
     }
-    func applicationDidFinishLaunching(aNotification: NSNotification?) {
+    public func applicationDidFinishLaunching(aNotification: NSNotification?) {
         
         statusItem.title = mainFrameStatus?.status
         
@@ -80,7 +82,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         }
     }
 
-    func applicationWillFinishLaunching(notification: NSNotification!) {
+    public func applicationWillFinishLaunching(notification: NSNotification!) {
         
         var showDock = self.defaultPrefs.valueForKey("showDockIcon") as Bool
         self.prefs.setDefaultSettings(self.userDefault.valueForKey("defaultPrefs") as NSDictionary)
@@ -93,7 +95,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         }
     }
     
-    func applicationWillTerminate(aNotification: NSNotification?) {
+    public func applicationWillTerminate(aNotification: NSNotification?) {
         // Insert code here to tear down your application
         
     }
