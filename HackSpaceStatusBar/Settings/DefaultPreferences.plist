@@ -5,7 +5,7 @@
 	<key>requestTimer</key>
 	<integer>122</integer>
 	<key>showDockIcon</key>
-	<false/>
+	<true/>
 	<key>startOtLogin</key>
 	<false/>
 	<key>website</key>
