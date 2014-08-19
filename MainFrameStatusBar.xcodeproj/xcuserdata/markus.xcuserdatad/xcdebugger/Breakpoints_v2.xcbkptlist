@@ -2,4 +2,52 @@
 <Bucket
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HackSpaceStatusBar/AppDelegate.swift"
+            timestampString = "430126043.063432"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "51"
+            endingLineNumber = "51"
+            landmarkName = "awakeFromNib()"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MainFrameStatusBar.AppDelegate.awakeFromNib (MainFrameStatusBar.AppDelegate)() -&gt; ()"
+                  moduleName = "MainFrameStatusBar"
+                  urlString = "file:///Users/markus/Documents/Dokumente/ProgrammeAmMac/MainFrameStatusBar/MainFrameStatusBar/HackSpaceStatusBar/AppDelegate.swift"
+                  timestampString = "430126206.325481"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "51"
+                  endingLineNumber = "51"
+                  offsetFromSymbolStart = "3513">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MainFrameStatusBar.AppDelegate.awakeFromNib (MainFrameStatusBar.AppDelegate)() -&gt; ()"
+                  moduleName = "MainFrameStatusBar"
+                  urlString = "file:///Users/markus/Documents/Dokumente/ProgrammeAmMac/MainFrameStatusBar/MainFrameStatusBar/HackSpaceStatusBar/AppDelegate.swift"
+                  timestampString = "430126206.327259"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "51"
+                  endingLineNumber = "51"
+                  offsetFromSymbolStart = "3605">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

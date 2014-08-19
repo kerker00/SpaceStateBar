@@ -35,7 +35,7 @@ public class StatusHandler {
         } else {
             var err: NSError
             
-            var jsonResult: NSDictionary = NSJSONSerialization.JSONObjectWithData(dataVal, options: NSJSONReadingOptions.MutableContainers, error: nil) as NSDictionary
+            var jsonResult: NSDictionary = NSJSONSerialization.JSONObjectWithData(dataVal!, options: NSJSONReadingOptions.MutableContainers, error: nil) as NSDictionary
 
             if(jsonResult.valueForKey("state") as NSString == "off") {
                 freshStatus = "C"

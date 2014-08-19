@@ -45,10 +45,10 @@ public class AppDelegate: NSObject, NSApplicationDelegate {
         
         if let defaultPrefLoaded = userDefault.objectForKey("defaultPrefLoaded") as? Bool {
             var defaultPrefsFile = NSBundle.mainBundle().URLForResource("DefaultPreferences", withExtension: "plist")
-            self.defaultPrefs = NSDictionary(contentsOfURL: defaultPrefsFile)
+            self.defaultPrefs = NSDictionary(contentsOfURL: defaultPrefsFile!)
 
             if(defaultPrefLoaded) {
-                self.defaultPrefs = NSDictionary(contentsOfURL: defaultPrefsFile)
+                self.defaultPrefs = NSDictionary(contentsOfURL: defaultPrefsFile!)
                 self.defaultPrefs.writeToFile("\(NSHomeDirectory())/file.plist", atomically: true)            
             } else {
                 self.userDefault.setObject(self.defaultPrefs, forKey: "defaultPrefs")
