@@ -36,7 +36,7 @@
 		281AA7E919A3788B001FC3BF /* icon_512x512.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_512x512.png; sourceTree = "<group>"; };
 		281AA7EA19A3788B001FC3BF /* icon_512x512@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_512x512@2x.png"; sourceTree = "<group>"; };
 		283D7560198FF24900729852 /* StatusDetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusDetails.swift; sourceTree = "<group>"; };
-		2860729119842C7800ED3E11 /* MainFrameStatusBar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MainFrameStatusBar.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2860729119842C7800ED3E11 /* spacestate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = spacestate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2860729519842C7800ED3E11 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2860729619842C7800ED3E11 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		2860729819842C7800ED3E11 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -83,7 +83,7 @@
 		2860729219842C7800ED3E11 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				2860729119842C7800ED3E11 /* MainFrameStatusBar.app */,
+				2860729119842C7800ED3E11 /* spacestate.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -127,9 +127,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		2860729019842C7800ED3E11 /* HackSpaceStatusBar */ = {
+		2860729019842C7800ED3E11 /* spacestate */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 286072AD19842C7800ED3E11 /* Build configuration list for PBXNativeTarget "HackSpaceStatusBar" */;
+			buildConfigurationList = 286072AD19842C7800ED3E11 /* Build configuration list for PBXNativeTarget "spacestate" */;
 			buildPhases = (
 				2860728D19842C7800ED3E11 /* Sources */,
 				2860728E19842C7800ED3E11 /* Frameworks */,
@@ -139,9 +139,9 @@
 			);
 			dependencies = (
 			);
-			name = HackSpaceStatusBar;
+			name = spacestate;
 			productName = HackSpaceStatusBar;
-			productReference = 2860729119842C7800ED3E11 /* MainFrameStatusBar.app */;
+			productReference = 2860729119842C7800ED3E11 /* spacestate.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -163,7 +163,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 2860728C19842C7800ED3E11 /* Build configuration list for PBXProject "MainFrameStatusBar" */;
+			buildConfigurationList = 2860728C19842C7800ED3E11 /* Build configuration list for PBXProject "spacestate" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -176,7 +176,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				2860729019842C7800ED3E11 /* HackSpaceStatusBar */,
+				2860729019842C7800ED3E11 /* spacestate */,
 			);
 		};
 /* End PBXProject section */
@@ -317,7 +317,7 @@
 				INFOPLIST_FILE = HackSpaceStatusBar/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
-				PRODUCT_NAME = MainFrameStatusBar;
+				PRODUCT_NAME = spacestate;
 				SDKROOT = macosx;
 			};
 			name = Debug;
@@ -330,7 +330,7 @@
 				INFOPLIST_FILE = HackSpaceStatusBar/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
-				PRODUCT_NAME = MainFrameStatusBar;
+				PRODUCT_NAME = spacestate;
 				SDKROOT = macosx;
 			};
 			name = Release;
@@ -338,7 +338,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		2860728C19842C7800ED3E11 /* Build configuration list for PBXProject "MainFrameStatusBar" */ = {
+		2860728C19842C7800ED3E11 /* Build configuration list for PBXProject "spacestate" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				286072AB19842C7800ED3E11 /* Debug */,
@@ -347,7 +347,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		286072AD19842C7800ED3E11 /* Build configuration list for PBXNativeTarget "HackSpaceStatusBar" */ = {
+		286072AD19842C7800ED3E11 /* Build configuration list for PBXNativeTarget "spacestate" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				286072AE19842C7800ED3E11 /* Debug */,

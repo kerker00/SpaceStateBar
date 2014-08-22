@@ -11,7 +11,7 @@
         </customObject>
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
-        <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="MainFrameStatusBar" customModuleProvider="target">
+        <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="spacestate" customModuleProvider="target">
             <connections>
                 <outlet property="about" destination="Hzx-lU-njO" id="817-FM-csE"/>
                 <outlet property="details" destination="QvC-M9-y7g" id="1A8-Kb-6IL"/>
@@ -22,11 +22,11 @@
         <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
         <menu title="Main Menu" systemMenu="main" id="e2R-Fg-beG">
             <items>
-                <menuItem title="MainFrameStatusBar" id="439-qW-8YF">
+                <menuItem title="spacestate" id="439-qW-8YF">
                     <modifierMask key="keyEquivalentModifierMask"/>
-                    <menu key="submenu" title="MainFrameStatusBar" systemMenu="apple" id="Q7g-a5-bAf">
+                    <menu key="submenu" title="spacestate" systemMenu="apple" id="Q7g-a5-bAf">
                         <items>
-                            <menuItem title="About MainFrameStatusBar" id="MGy-P9-OYP">
+                            <menuItem title="About spacestate" id="MGy-P9-OYP">
                                 <modifierMask key="keyEquivalentModifierMask"/>
                                 <connections>
                                     <action selector="showAboutView:" target="Voe-Tx-rLC" id="6gu-pz-FjR"/>
@@ -44,7 +44,7 @@
                                 <menu key="submenu" title="Services" systemMenu="services" id="hse-jC-41C"/>
                             </menuItem>
                             <menuItem isSeparatorItem="YES" id="8zI-xi-HtL"/>
-                            <menuItem title="Hide MainFrameStatusBar" keyEquivalent="h" id="sUJ-aW-I8p"/>
+                            <menuItem title="Hide spacestate" keyEquivalent="h" id="sUJ-aW-I8p"/>
                             <menuItem title="Hide Others" keyEquivalent="h" id="d4l-TV-SEJ">
                                 <modifierMask key="keyEquivalentModifierMask" option="YES" command="YES"/>
                             </menuItem>
@@ -52,7 +52,7 @@
                                 <modifierMask key="keyEquivalentModifierMask"/>
                             </menuItem>
                             <menuItem isSeparatorItem="YES" id="ldf-47-AUd"/>
-                            <menuItem title="Quit MainFrameStatusBar" keyEquivalent="q" id="Ho2-0g-xfe">
+                            <menuItem title="Quit spacestate" keyEquivalent="q" id="Ho2-0g-xfe">
                                 <connections>
                                     <action selector="quit:" target="Voe-Tx-rLC" id="LsP-J8-15I"/>
                                 </connections>
@@ -79,17 +79,17 @@
                     <modifierMask key="keyEquivalentModifierMask"/>
                     <menu key="submenu" title="Help" systemMenu="help" id="MS6-z0-jTO">
                         <items>
-                            <menuItem title="MainFrameStatusBar Help" keyEquivalent="?" id="Ew9-9v-Ssb"/>
+                            <menuItem title="spacestate Help" keyEquivalent="?" id="Ew9-9v-Ssb"/>
                         </items>
                     </menu>
                 </menuItem>
             </items>
         </menu>
-        <window title="Main Frame Status" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="QvC-M9-y7g" customClass="StatusDetails" customModule="MainFrameStatusBar">
+        <window title="Main Frame Status" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="QvC-M9-y7g" customClass="StatusDetails" customModule="spacestate" customModuleProvider="target">
             <windowStyleMask key="styleMask" titled="YES" closable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="335" y="390" width="418" height="314"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="1440" height="878"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1178"/>
             <view key="contentView" id="EiT-Mj-1SZ">
                 <rect key="frame" x="0.0" y="0.0" width="418" height="314"/>
                 <autoresizingMask key="autoresizingMask"/>
@@ -164,7 +164,7 @@ email: vorstand@kreativitaet-trifft-technik.de</string>
                             <font key="font" metaFont="system"/>
                         </buttonCell>
                         <connections>
-                            <action selector="openWebsite:" target="QvC-M9-y7g" id="WbQ-Eo-5za"/>
+                            <action selector="openWebsite:" target="QvC-M9-y7g" id="CcA-YO-LcV"/>
                         </connections>
                     </button>
                 </subviews>
@@ -199,7 +199,7 @@ email: vorstand@kreativitaet-trifft-technik.de</string>
                     </connections>
                 </menuItem>
                 <menuItem isSeparatorItem="YES" id="yIa-Jf-E9p"/>
-                <menuItem title="About MainFrameStatusBar" id="bfm-Mp-E6j">
+                <menuItem title="About spacestate" id="bfm-Mp-E6j">
                     <modifierMask key="keyEquivalentModifierMask"/>
                     <connections>
                         <action selector="showAboutView:" target="Voe-Tx-rLC" id="DXx-2q-Gvv"/>
@@ -212,24 +212,24 @@ email: vorstand@kreativitaet-trifft-technik.de</string>
                     </connections>
                 </menuItem>
             </items>
-            <point key="canvasLocation" x="343.5" y="412.5"/>
+            <point key="canvasLocation" x="362.5" y="250.5"/>
         </menu>
         <window title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="Hzx-lU-njO">
             <windowStyleMask key="styleMask" titled="YES" closable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="283" y="305" width="348" height="260"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="1440" height="878"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1178"/>
             <view key="contentView" id="611-zl-BLt">
                 <rect key="frame" x="0.0" y="0.0" width="348" height="260"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3sk-qe-FjX">
                         <rect key="frame" x="129" y="163" width="90" height="90"/>
-                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="Icon" id="I0D-ae-P6K"/>
+                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="icon_256x256" id="I0D-ae-P6K"/>
                     </imageView>
                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nDQ-sl-Wjd">
                         <rect key="frame" x="101" y="143" width="146" height="17"/>
-                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="MainFrameStatusBar" id="bfg-0W-N6M">
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="spacestate" id="bfg-0W-N6M">
                             <font key="font" metaFont="systemBold"/>
                             <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
@@ -263,13 +263,13 @@ https://github.com/kerker00/mainFrameStatusBar</string>
                     </textField>
                 </subviews>
             </view>
-            <point key="canvasLocation" x="394" y="-92"/>
+            <point key="canvasLocation" x="362" y="-21"/>
         </window>
-        <window title="Preferences" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="dOZ-gH-c37" customClass="PreferencePane" customModule="MainFrameStatusBar">
+        <window title="Preferences" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="dOZ-gH-c37" customClass="PreferencePane" customModule="spacestate" customModuleProvider="target">
             <windowStyleMask key="styleMask" titled="YES" closable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="196" y="240" width="457" height="178"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="1440" height="878"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1178"/>
             <view key="contentView" id="WOU-mM-Lh6">
                 <rect key="frame" x="0.0" y="0.0" width="457" height="178"/>
                 <autoresizingMask key="autoresizingMask"/>
@@ -296,7 +296,7 @@ https://github.com/kerker00/mainFrameStatusBar</string>
                     </button>
                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wTi-xF-eWo">
                         <rect key="frame" x="18" y="116" width="221" height="17"/>
-                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="Start MainFrameStatusBar at login:" id="Xt0-Xk-ZOD">
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="Start spacestate at login:" id="Xt0-Xk-ZOD">
                             <font key="font" metaFont="system"/>
                             <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
@@ -393,11 +393,11 @@ https://github.com/kerker00/mainFrameStatusBar</string>
                 <outlet property="restartMainFrameStatusBar" destination="wBp-Tf-oWS" id="Wyl-64-xPu"/>
                 <outlet property="timerInterval" destination="xPu-mI-doE" id="DhW-9w-bcq"/>
             </connections>
-            <point key="canvasLocation" x="342.5" y="-465"/>
+            <point key="canvasLocation" x="-111.5" y="-223"/>
         </window>
-        <customObject id="ocQ-WA-jPz" customClass="StatusDetails" customModule="MainFrameStatusBar" customModuleProvider="target"/>
+        <customObject id="ocQ-WA-jPz" customClass="StatusDetails" customModule="spacestate" customModuleProvider="target"/>
     </objects>
     <resources>
-        <image name="Icon" width="1024" height="1024"/>
+        <image name="icon_256x256" width="256" height="256"/>
     </resources>
 </document>

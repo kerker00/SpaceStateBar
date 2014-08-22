@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "2860729019842C7800ED3E11"
-               BuildableName = "MainFrameStatusBar.app"
-               BlueprintName = "HackSpaceStatusBar"
-               ReferencedContainer = "container:MainFrameStatusBar.xcodeproj">
+               BuildableName = "spacestate.app"
+               BlueprintName = "spacestate"
+               ReferencedContainer = "container:spacestate.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -35,7 +35,7 @@
                BlueprintIdentifier = "286072A219842C7800ED3E11"
                BuildableName = "HackSpaceStatusBarTests.xctest"
                BlueprintName = "HackSpaceStatusBarTests"
-               ReferencedContainer = "container:MainFrameStatusBar.xcodeproj">
+               ReferencedContainer = "container:spacestate.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -43,9 +43,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "2860729019842C7800ED3E11"
-            BuildableName = "MainFrameStatusBar.app"
-            BlueprintName = "HackSpaceStatusBar"
-            ReferencedContainer = "container:MainFrameStatusBar.xcodeproj">
+            BuildableName = "spacestate.app"
+            BlueprintName = "spacestate"
+            ReferencedContainer = "container:spacestate.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -62,9 +62,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "2860729019842C7800ED3E11"
-            BuildableName = "MainFrameStatusBar.app"
-            BlueprintName = "HackSpaceStatusBar"
-            ReferencedContainer = "container:MainFrameStatusBar.xcodeproj">
+            BuildableName = "spacestate.app"
+            BlueprintName = "spacestate"
+            ReferencedContainer = "container:spacestate.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -80,9 +80,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "2860729019842C7800ED3E11"
-            BuildableName = "MainFrameStatusBar.app"
-            BlueprintName = "HackSpaceStatusBar"
-            ReferencedContainer = "container:MainFrameStatusBar.xcodeproj">
+            BuildableName = "spacestate.app"
+            BlueprintName = "spacestate"
+            ReferencedContainer = "container:spacestate.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

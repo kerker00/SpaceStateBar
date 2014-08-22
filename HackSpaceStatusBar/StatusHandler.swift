@@ -10,6 +10,12 @@ import Foundation
 
 public class StatusHandler {
     
+    init() {
+        
+    }
+    
+    public var stateDetails: NSDictionary?
+    
     public var status: NSString? {
         get {
             return self.getStatus()
@@ -44,9 +50,30 @@ public class StatusHandler {
             }
  
         }
-        
-            
-        
+        getDetails("http://status.mainframe.io/api/spaceInfo")
         return freshStatus
+    }
+    
+    func getDetails(urlToSpace : NSString) {
+        var freshDetails : NSDictionary = NSDictionary()
+        
+        // var urlPathToSpace: String = "http://status.mainframe.io/api/spaceInfo"
+        var url: NSURL = NSURL(string: urlToSpace)
+        var request1: NSURLRequest = NSURLRequest(URL: url)
+        let queue:NSOperationQueue = NSOperationQueue()
+        
+        var stateDetails : NSDictionary = NSDictionary()
+        NSURLConnection.sendAsynchronousRequest(request1, queue: queue, completionHandler:{ (response: NSURLResponse!, data: NSData!, error: NSError!) -> Void in
+            
+            var err: NSError?
+            
+            if let myerror : NSError = error {
+                self.stateDetails = NSDictionary()
+            } else {
+                self.stateDetails = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers, error: &err) as? NSDictionary
+                println("Status")
+                // println(freshDetails)
+            }
+        })
     }
 }

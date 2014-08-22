@@ -56,19 +56,21 @@ public class AppDelegate: NSObject, NSApplicationDelegate {
                 self.defaultPrefs.writeToFile("\(NSHomeDirectory())/file.plist", atomically: true)
             }
         } else {
-            self.userDefault.setObject(self.defaultPrefs, forKey: "defaultPrefs")
-            self.defaultPrefs.writeToFile("\(NSHomeDirectory())/file.plist", atomically: true)
+            // self.userDefault.setObject(self.defaultPrefs, forKey: "defaultPrefs")
+            // self.defaultPrefs.writeToFile("\(NSHomeDirectory())/file.plist", atomically: true)
             userDefault.setObject(true, forKey: "defaultPrefLoaded")
         }
         userDefault.setObject(false, forKey: "defaultPrefLoaded")
         userDefault.synchronize()
         
-        prefs.getListofSpaces()
+        // prefs.getListofSpaces()
     }
     
     @IBAction func quit(sender: AnyObject) {
         NSApplication.sharedApplication().terminate(nil)
     }
+
+    
     public func applicationDidFinishLaunching(aNotification: NSNotification?) {
         
         statusItem.title = mainFrameStatus?.status
@@ -85,7 +87,7 @@ public class AppDelegate: NSObject, NSApplicationDelegate {
     public func applicationWillFinishLaunching(notification: NSNotification!) {
         
         var showDock = self.defaultPrefs.valueForKey("showDockIcon") as Bool
-        self.prefs.setDefaultSettings(self.userDefault.valueForKey("defaultPrefs") as NSDictionary)
+       // self.prefs.setDefaultSettings(self.userDefault.valueForKey("defaultPrefs") as NSDictionary)
         
         var NSApp: NSApplication = NSApplication.sharedApplication()
         if(showDock){

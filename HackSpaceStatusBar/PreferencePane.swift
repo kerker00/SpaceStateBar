@@ -99,7 +99,6 @@ class PreferencePane: NSWindow {
         
         
         NSURLConnection.sendAsynchronousRequest(request1, queue: queue, completionHandler:{ (response: NSURLResponse!, data: NSData!, error: NSError!) -> Void in
-            /* Your code */
             
             var err: NSError?
             
