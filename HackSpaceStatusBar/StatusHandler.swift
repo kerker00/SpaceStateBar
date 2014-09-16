@@ -26,7 +26,7 @@ public class StatusHandler {
         var freshStatus: NSString = ""
         
         let urlPath: String = "http://status.kreativitaet-trifft-technik.de/api/openState"
-        var url: NSURL = NSURL(string: urlPath)
+        var url: NSURL = NSURL(string: urlPath)!
         var request1: NSURLRequest = NSURLRequest(URL: url)
 
         var response: NSURLResponse?
@@ -58,7 +58,7 @@ public class StatusHandler {
         var freshDetails : NSDictionary = NSDictionary()
         
         // var urlPathToSpace: String = "http://status.mainframe.io/api/spaceInfo"
-        var url: NSURL = NSURL(string: urlToSpace)
+        var url: NSURL = NSURL(string: urlToSpace)!
         var request1: NSURLRequest = NSURLRequest(URL: url)
         let queue:NSOperationQueue = NSOperationQueue()
         

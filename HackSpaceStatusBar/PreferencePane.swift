@@ -93,7 +93,7 @@ class PreferencePane: NSWindow {
     func getListofSpaces() {
         
         let urlPath: String = "http://spaceapi.net/directory.json?api=0.13"
-        var url: NSURL = NSURL(string: urlPath)
+        var url: NSURL = NSURL(string: urlPath)!
         var request1: NSURLRequest = NSURLRequest(URL: url)
         let queue:NSOperationQueue = NSOperationQueue()
         
