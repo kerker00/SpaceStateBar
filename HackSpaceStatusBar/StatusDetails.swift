@@ -19,7 +19,7 @@ class StatusDetails: NSWindow {
     }
     
     @IBAction func openWebsite(sender: AnyObject) {
-            NSWorkspace.sharedWorkspace().openURL(NSURL(string: "http://status.mainframe.io"))
+            NSWorkspace.sharedWorkspace().openURL(NSURL(string: "http://status.mainframe.io")!)
     }
     
    
