@@ -71,22 +71,24 @@ public class AppDelegate: NSObject, NSApplicationDelegate {
     }
 
     
-    public func applicationDidFinishLaunching(aNotification: NSNotification?) {
+    public func applicationDidFinishLaunching(aNotification: NSNotification) {
         
-        statusItem.title = mainFrameStatus?.status
+        statusItem.title = mainFrameStatus?.status as? String
         
         if timer.valid {
             timer.invalidate()
         }
         
-        timer = NSTimer.scheduledTimerWithTimeInterval(120.0, repeats: true) {
-             self.statusItem.title = self.mainFrameStatus?.status
-        }
+        timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: Selector("updateStatus"), userInfo: nil, repeats: true)
     }
-
-    public func applicationWillFinishLaunching(notification: NSNotification!) {
+    
+    func updateStatus() {
+        self.statusItem.title = self.mainFrameStatus?.status as? String
+    }
+    
+    public func applicationWillFinishLaunching(notification: NSNotification) {
         
-        var showDock = self.defaultPrefs.valueForKey("showDockIcon") as Bool
+        var showDock = self.defaultPrefs.valueForKey("showDockIcon") as! Bool
        // self.prefs.setDefaultSettings(self.userDefault.valueForKey("defaultPrefs") as NSDictionary)
         
         var NSApp: NSApplication = NSApplication.sharedApplication()
@@ -97,7 +99,7 @@ public class AppDelegate: NSObject, NSApplicationDelegate {
         }
     }
     
-    public func applicationWillTerminate(aNotification: NSNotification?) {
+    public func applicationWillTerminate(aNotification: NSNotification) {
         // Insert code here to tear down your application
         
     }
@@ -121,7 +123,7 @@ public class AppDelegate: NSObject, NSApplicationDelegate {
     }
     
     @IBAction func refresh(sender: AnyObject) {
-        self.statusItem.title = self.mainFrameStatus?.status
+        self.statusItem.title = self.mainFrameStatus?.status as? String
     }
 }
 

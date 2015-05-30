@@ -4,10 +4,15 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>spacestate info.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
 		<key>spacestate.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>1</integer>
+			<integer>0</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
@@ -22,12 +27,22 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>283970681A76B43A00880597</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>2860729019842C7800ED3E11</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>286072A219842C7800ED3E11</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>28E578271A76D44500716BFC</key>
 		<dict>
 			<key>primary</key>
 			<true/>

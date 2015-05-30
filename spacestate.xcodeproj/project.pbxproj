@@ -22,8 +22,38 @@
 		2860729E19842C7800ED3E11 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2860729C19842C7800ED3E11 /* MainMenu.xib */; };
 		286C62271992164A00468556 /* DefaultPreferences.plist in Resources */ = {isa = PBXBuildFile; fileRef = 286C62261992164A00468556 /* DefaultPreferences.plist */; };
 		28D639EE199147CA00535021 /* StatusHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28D639ED199147CA00535021 /* StatusHandler.swift */; };
+		28E578291A76D44500716BFC /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2839706B1A76B43A00880597 /* NotificationCenter.framework */; };
+		28E578301A76D44500716BFC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 28E5782E1A76D44500716BFC /* InfoPlist.strings */; };
+		28E578321A76D44500716BFC /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28E578311A76D44500716BFC /* TodayViewController.swift */; };
+		28E578341A76D44500716BFC /* TodayViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28E578331A76D44500716BFC /* TodayViewController.xib */; };
+		28E578371A76D44500716BFC /* spacestate info.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 28E578281A76D44500716BFC /* spacestate info.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		28E5783C1A76D4CB00716BFC /* StatusHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28E5783B1A76D4CB00716BFC /* StatusHandler.swift */; };
 		28E6C0641985729800FCC04A /* PreferencePane.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28E6C0631985729800FCC04A /* PreferencePane.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		28E578351A76D44500716BFC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2860728919842C7800ED3E11 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 28E578271A76D44500716BFC;
+			remoteInfo = "spacestate info";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		2839707E1A76B43A00880597 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				28E578371A76D44500716BFC /* spacestate info.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		2808BDBA19845A8700BFAAAC /* TimerEx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerEx.swift; sourceTree = "<group>"; };
@@ -35,6 +65,7 @@
 		281AA7E819A3788B001FC3BF /* icon_32x32@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_32x32@2x.png"; sourceTree = "<group>"; };
 		281AA7E919A3788B001FC3BF /* icon_512x512.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_512x512.png; sourceTree = "<group>"; };
 		281AA7EA19A3788B001FC3BF /* icon_512x512@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_512x512@2x.png"; sourceTree = "<group>"; };
+		2839706B1A76B43A00880597 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = Library/Frameworks/NotificationCenter.framework; sourceTree = DEVELOPER_DIR; };
 		283D7560198FF24900729852 /* StatusDetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusDetails.swift; sourceTree = "<group>"; };
 		2860729119842C7800ED3E11 /* spacestate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = spacestate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2860729519842C7800ED3E11 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -44,6 +75,13 @@
 		286C62261992164A00468556 /* DefaultPreferences.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = DefaultPreferences.plist; path = HackSpaceStatusBar/Settings/DefaultPreferences.plist; sourceTree = "<group>"; };
 		288739121992317C00993025 /* MainFrameStatusBar.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = MainFrameStatusBar.entitlements; sourceTree = "<group>"; };
 		28D639ED199147CA00535021 /* StatusHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusHandler.swift; sourceTree = "<group>"; };
+		28E578281A76D44500716BFC /* spacestate info.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "spacestate info.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		28E5782C1A76D44500716BFC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		28E5782D1A76D44500716BFC /* spacestate_info.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = spacestate_info.entitlements; sourceTree = "<group>"; };
+		28E5782F1A76D44500716BFC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		28E578311A76D44500716BFC /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
+		28E578331A76D44500716BFC /* TodayViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TodayViewController.xib; sourceTree = "<group>"; };
+		28E5783B1A76D4CB00716BFC /* StatusHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusHandler.swift; sourceTree = "<group>"; };
 		28E6C0631985729800FCC04A /* PreferencePane.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreferencePane.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -52,6 +90,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		28E578251A76D44500716BFC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				28E578291A76D44500716BFC /* NotificationCenter.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,10 +118,20 @@
 			path = "App Icon";
 			sourceTree = "<group>";
 		};
+		2839706A1A76B43A00880597 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2839706B1A76B43A00880597 /* NotificationCenter.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		2860728819842C7800ED3E11 = {
 			isa = PBXGroup;
 			children = (
 				2860729319842C7800ED3E11 /* HackSpaceStatusBar */,
+				28E5782A1A76D44500716BFC /* spacestate info */,
+				2839706A1A76B43A00880597 /* Frameworks */,
 				2860729219842C7800ED3E11 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -84,6 +140,7 @@
 			isa = PBXGroup;
 			children = (
 				2860729119842C7800ED3E11 /* spacestate.app */,
+				28E578281A76D44500716BFC /* spacestate info.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -124,6 +181,27 @@
 			path = ..;
 			sourceTree = "<group>";
 		};
+		28E5782A1A76D44500716BFC /* spacestate info */ = {
+			isa = PBXGroup;
+			children = (
+				28E5783B1A76D4CB00716BFC /* StatusHandler.swift */,
+				28E578311A76D44500716BFC /* TodayViewController.swift */,
+				28E578331A76D44500716BFC /* TodayViewController.xib */,
+				28E5782B1A76D44500716BFC /* Supporting Files */,
+			);
+			path = "spacestate info";
+			sourceTree = "<group>";
+		};
+		28E5782B1A76D44500716BFC /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				28E5782C1A76D44500716BFC /* Info.plist */,
+				28E5782D1A76D44500716BFC /* spacestate_info.entitlements */,
+				28E5782E1A76D44500716BFC /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -134,15 +212,34 @@
 				2860728D19842C7800ED3E11 /* Sources */,
 				2860728E19842C7800ED3E11 /* Frameworks */,
 				2860728F19842C7800ED3E11 /* Resources */,
+				2839707E1A76B43A00880597 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				28E578361A76D44500716BFC /* PBXTargetDependency */,
 			);
 			name = spacestate;
 			productName = HackSpaceStatusBar;
 			productReference = 2860729119842C7800ED3E11 /* spacestate.app */;
 			productType = "com.apple.product-type.application";
+		};
+		28E578271A76D44500716BFC /* spacestate info */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 28E578381A76D44500716BFC /* Build configuration list for PBXNativeTarget "spacestate info" */;
+			buildPhases = (
+				28E578241A76D44500716BFC /* Sources */,
+				28E578251A76D44500716BFC /* Frameworks */,
+				28E578261A76D44500716BFC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "spacestate info";
+			productName = "spacestate info";
+			productReference = 28E578281A76D44500716BFC /* spacestate info.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -161,6 +258,9 @@
 							};
 						};
 					};
+					28E578271A76D44500716BFC = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
 				};
 			};
 			buildConfigurationList = 2860728C19842C7800ED3E11 /* Build configuration list for PBXProject "spacestate" */;
@@ -177,6 +277,7 @@
 			projectRoot = "";
 			targets = (
 				2860729019842C7800ED3E11 /* spacestate */,
+				28E578271A76D44500716BFC /* spacestate info */,
 			);
 		};
 /* End PBXProject section */
@@ -199,6 +300,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		28E578261A76D44500716BFC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				28E578341A76D44500716BFC /* TodayViewController.xib in Resources */,
+				28E578301A76D44500716BFC /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -215,7 +325,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		28E578241A76D44500716BFC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				28E5783C1A76D4CB00716BFC /* StatusHandler.swift in Sources */,
+				28E578321A76D44500716BFC /* TodayViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		28E578361A76D44500716BFC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 28E578271A76D44500716BFC /* spacestate info */;
+			targetProxy = 28E578351A76D44500716BFC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		2860729C19842C7800ED3E11 /* MainMenu.xib */ = {
@@ -224,6 +351,14 @@
 				2860729D19842C7800ED3E11 /* Base */,
 			);
 			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+		28E5782E1A76D44500716BFC /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				28E5782F1A76D44500716BFC /* en */,
+			);
+			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -314,6 +449,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = HackSpaceStatusBar/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
@@ -327,11 +463,54 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = HackSpaceStatusBar/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				PRODUCT_NAME = spacestate;
 				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		28E578391A76D44500716BFC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "spacestate info/spacestate_info.entitlements";
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "spacestate info/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @executable_path/../../../../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		28E5783A1A76D44500716BFC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "spacestate info/spacestate_info.entitlements";
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				INFOPLIST_FILE = "spacestate info/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @executable_path/../../../../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
 			};
 			name = Release;
 		};
@@ -352,6 +531,15 @@
 			buildConfigurations = (
 				286072AE19842C7800ED3E11 /* Debug */,
 				286072AF19842C7800ED3E11 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		28E578381A76D44500716BFC /* Build configuration list for PBXNativeTarget "spacestate info" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				28E578391A76D44500716BFC /* Debug */,
+				28E5783A1A76D44500716BFC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

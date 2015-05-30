@@ -28,7 +28,7 @@ public class StatusHandler {
         let urlPath: String = "http://status.kreativitaet-trifft-technik.de/api/openState"
         var url: NSURL = NSURL(string: urlPath)!
         var request1: NSURLRequest = NSURLRequest(URL: url)
-
+        
         var response: NSURLResponse?
         var error: NSError?
         
@@ -42,15 +42,14 @@ public class StatusHandler {
             var err: NSError
             
             var jsonResult: NSDictionary = NSJSONSerialization.JSONObjectWithData(dataVal!, options: NSJSONReadingOptions.MutableContainers, error: nil) as! NSDictionary
-
+            
             if(jsonResult.valueForKey("state") as! NSString == "off") {
                 freshStatus = "C"
             } else {
                 freshStatus = "O"
             }
- 
+            
         }
-        getDetails("http://status.mainframe.io/api/spaceInfo")
         return freshStatus
     }
     

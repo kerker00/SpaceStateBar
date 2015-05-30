@@ -26,24 +26,24 @@ class PreferencePane: NSWindow {
     var spaceList : NSDictionary = NSDictionary()
     
     func setDefaultSettings(settings: NSDictionary) {
-        if(settings.valueForKey("showDockIcon") as Bool) {
+        if(settings.valueForKey("showDockIcon") as! Bool) {
             dockIcon.state = NSOnState
         } else {
             dockIcon.state = NSOffState
         }
         
-        if(settings.valueForKey("startOtLogin") as Bool) {
+        if(settings.valueForKey("startOtLogin") as! Bool) {
             atLogin.state = NSOnState
         } else {
             atLogin.state = NSOffState
         }
         
-        timerInterval.stringValue = String(settings.valueForKey("requestTimer") as Int)
+        timerInterval.stringValue = String(settings.valueForKey("requestTimer") as! Int)
         
     }
     
     @IBAction func startAtLogin(sender: AnyObject) {
-        var showDockIcon = sender as NSButton
+        var showDockIcon = sender as! NSButton
         if(showDockIcon.state == NSOnState){
             dockIcon.state = NSOnState
         } else {
@@ -52,14 +52,14 @@ class PreferencePane: NSWindow {
     }
     
     @IBAction func setHackSpaceApiEndPoint(sender: AnyObject) {
-        var seletedSpace = (sender as NSPopUpButton).selectedItem!
-        var test = NSApplication.sharedApplication().delegate as AppDelegate;
+        var seletedSpace = (sender as! NSPopUpButton).selectedItem!
+        var test = NSApplication.sharedApplication().delegate as! AppDelegate;
         var state = test.state
         state.setValue(spaceList.valueForKey(seletedSpace.title), forKey : "website")
     }
     
     @IBAction func showHideDockIcon(sender: AnyObject) {
-        var showDockIcon = sender as NSButton
+        var showDockIcon = sender as! NSButton
         if(showDockIcon.state == NSOnState){
             NSUserDefaults.standardUserDefaults().setBool(true, forKey: "showDockIcon")
         } else {
@@ -80,7 +80,7 @@ class PreferencePane: NSWindow {
         args.addObject("sleep 0.2; open \"\(NSBundle.mainBundle().bundlePath)\"")
         
         task.launchPath = "/bin/sh"
-        task.arguments = args
+        task.arguments = args as [AnyObject]
         task.launch()
         
         NSApplication.sharedApplication().terminate(nil)
@@ -103,17 +103,17 @@ class PreferencePane: NSWindow {
             var err: NSError?
             
             if let myerror : NSError = error {
-                self.setListOfSpaces(NSDictionary())
+                self.newListOfSpaces(NSDictionary())
             } else {
-                var jsonResult: NSDictionary = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers, error: &err) as NSDictionary
-                self.setListOfSpaces(jsonResult)
+                var jsonResult: NSDictionary = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers, error: &err) as! NSDictionary
+                self.newListOfSpaces(jsonResult)
                 self.spaceList = jsonResult
             }
         })
         
     }
     
-    func setListOfSpaces(spaceList: NSDictionary) {
+    func newListOfSpaces(spaceList: NSDictionary) {
         listOfSpaces.removeAllItems()
         var myItems = spaceList.allKeys as NSArray
         var sortedItems = myItems.sortedArrayUsingSelector("compare:")
