@@ -11,7 +11,7 @@
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>46304DA7C25683B1CF23D5764A42877426852DCC</key>
-		<string>https://github.com/kerker00/MainFrameStatusBar.git</string>
+		<string>https://github.com/GrafixMafia/SpaceStateBar.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>spacestate.xcodeproj</string>
@@ -21,7 +21,7 @@
 		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://github.com/kerker00/MainFrameStatusBar.git</string>
+	<string>https://github.com/GrafixMafia/SpaceStateBar.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
@@ -34,7 +34,7 @@
 			<key>IDESourceControlWCCIdentifierKey</key>
 			<string>46304DA7C25683B1CF23D5764A42877426852DCC</string>
 			<key>IDESourceControlWCCName</key>
-			<string>MainFrameStatusBar</string>
+			<string>SpaceStateBar</string>
 		</dict>
 	</array>
 </dict>
